@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>道家文章列表 - Luckway</title>
+    <style>
+        /* 保持与主页一致的皇家紫风格 */
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #1a0b2e 0%, #4b1d6e 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: "Kaiti", "STKaiti", serif;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+
+        /* 文章列表容器 */
+        .list-container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* 单篇文章链接卡片 */
+        .article-link {
+            display: block;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 25px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .article-link:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(10px); /* 悬停时向右轻微移动 */
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .article-title {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .article-desc {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* 返回首页按钮 */
+        .back-btn {
+            margin-top: 50px;
+            padding: 10px 30px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background: white;
+            color: #4b1d6e;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>道家文章 · 目录</h1>
+
+    <div class="list-container">
+
+        <!-- 第1篇文章 -->
+        <!-- 注意：因为这个文件和 paper001 在同一个文件夹，所以直接写文件名即可 -->
+        <a href="paper001.html" class="article-link">
+            <div class="article-title">001. 第一篇论文标题</div>
+            <div class="article-desc">这里可以写一句话简介，比如：论道法自然的起源...</div>
+        </a>
+
+        <!-- 第2篇文章 -->
+        <a href="paper002.html" class="article-link">
+            <div class="article-title">002. 第二篇论文标题</div>
+            <div class="article-desc">这里写第二篇的简介...</div>
+        </a>
+
+        <!-- 以后有第3篇，就在这里复制上面的代码块，把 002 改成 003 -->
+
+    </div>
+
+    <!-- 返回最外层主页 -->
+    <!-- ../ 表示“向上一级”，即回到根目录 -->
+    <a href="../../index.html" class="back-btn">返回首页</a>
+
+</body>
+</html>
