@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Luckway 论文库</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #333; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin: 10px 0; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        a { text-decoration: none; color: #0070f3; font-size: 18px; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <h1>Luckway 论文列表</h1>
+    <p>这里收录了 144 篇相关论文。</p>
+
+    <ul>
+        <!-- 这里是链接列表 -->
+        
+        <!-- 如果你用了 papers 文件夹，链接就是 papers/paper1.html -->
+        <li>
+            <span>001. </span>
+            <a href="papers/paper1.html">第一篇论文的标题</a>
+        </li>
+
+        <!-- 以后每上传一篇，就在这里加一行 -->
+        <li>
+            <span>002. </span>
+            <a href="papers/paper2.html">第二篇论文的标题 (待上传)</a>
+        </li>
+        
+    </ul>
+
+</body>
+</html>
