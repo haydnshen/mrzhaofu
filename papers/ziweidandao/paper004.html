@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>紫微丹道·十大天命修行格局（卷一） - 照辅先生</title>
+<style>
+    /* --- 核心样式库：道家极简风 --- */
+    :root {
+        --bg-color: #f9f7f2; /* 宣纸白 */
+        --text-main: #2c2c2c; /* 墨色 */
+        --text-sub: #5d4037; /* 褐土 */
+        --border-color: #4e342e; /* 沉香色 */
+        --ming-bg: #e8dede; /* 命宫底：淡丹红 */
+        --fude-bg: #fff8e1; /* 福德底：淡金黄 */
+        --accent-red: #8e352e; /* 朱砂 */
+        --accent-gold: #b8860b; /* 金丹 */
+        --font-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        font-family: var(--font-serif);
+        line-height: 1.6;
+        padding: 20px;
+    }
+
+    /* --- 论文头部 --- */
+    header {
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+        text-align: center;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        font-size: clamp(1.2rem, 4vw, 2.2rem);
+        color: var(--text-main);
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .meta { font-size: 0.9rem; color: var(--text-sub); font-weight: bold; }
+
+    /* --- 摘要框 --- */
+    .abstract {
+        max-width: 700px;
+        margin: 0 auto 40px auto;
+        padding: 20px;
+        background: #fff;
+        border-left: 5px solid var(--accent-red);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        font-size: 0.95rem;
+        text-align: justify;
+    }
+
+    /* --- 星盘图鉴 --- */
+    .chart-container {
+        max-width: 500px;
+        margin: 0 auto 50px auto;
+        border: 2px solid var(--border-color);
+        background-color: var(--border-color);
+        padding: 2px;
+    }
+
+    .zw-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        aspect-ratio: 1/1;
+        gap: 1px;
+        background-color: var(--border-color);
+    }
+
+    .cell {
+        background-color: #fffbf0;
+        position: relative;
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .is-ming { background-color: var(--ming-bg); box-shadow: inset 0 0 0 1px var(--accent-red); }
+    .is-ming::before {
+        content: "命宫"; position: absolute; top: 0; left: 0;
+        background: var(--accent-red); color: #fff; font-size: 0.6rem; padding: 0 2px;
+    }
+
+    .is-fude { background-color: var(--fude-bg); box-shadow: inset 0 0 0 1px var(--accent-gold); }
+    .is-fude::before {
+        content: "福德"; position: absolute; top: 0; left: 0;
+        background: var(--accent-gold); color: #333; font-size: 0.6rem; padding: 0 2px;
+    }
+
+    .dizhi { position: absolute; bottom: 0; right: 2px; font-size: 0.7rem; color: #999; font-weight: bold; }
+
+    .stars { font-weight: bold; width: 100%; line-height: 1.1; font-size: 0.8rem; }
+    .main-star { color: #000; }
+    .sub-star { color: #555; font-size: 0.8em; font-weight: normal; display: block; transform: scale(0.9); }
+    .borrow-star { color: #666; font-weight: normal; font-size: 0.8em; }
+
+    .center-block {
+        grid-column: 2 / 4; grid-row: 2 / 4;
+        background-color: #fff; padding: 5px;
+        display: flex; flex-direction: column;
+        justify-content: center; align-items: center; text-align: center;
+    }
+    
+    .center-text {
+        font-size: clamp(10px, 2.8vw, 14px);
+        color: var(--text-sub); line-height: 1.5; width: 100%;
+    }
+    
+    .center-text strong { color: var(--accent-red); display: block; margin-bottom: 4px; font-size: 1.1em; }
+    .note { color: #888; font-size: 0.9em; margin-top: 4px; display: block;}
+
+    /* --- 正文排版 --- */
+    article { max-width: 800px; margin: 0 auto; }
+    h2 { font-size: 1.3rem; color: var(--text-sub); border-bottom: 1px solid #ddd; padding-bottom: 8px; margin: 35px 0 15px 0; }
+    h3 { font-size: 1.1rem; color: var(--accent-red); margin: 20px 0 10px 0; }
+    p { margin-bottom: 12px; text-align: justify; font-size: 0.95rem; }
+    ul { padding-left: 18px; margin-bottom: 15px; }
+    li { margin-bottom: 5px; font-size: 0.95rem; }
+
+    /* --- 表格样式 --- */
+    .gender-table {
+        width: 100%; border-collapse: collapse; margin: 20px 0;
+        font-family: var(--font-serif); font-size: 0.9rem;
+    }
+    .gender-table th, .gender-table td {
+        border: 1px solid #4e342e; padding: 10px; text-align: center;
+    }
+    .gender-table th { background-color: #e8dede; color: #8e352e; font-weight: bold; }
+    .male-row { background-color: #fffbf0; }
+    .female-row { background-color: #f9f7f2; }
+    .highlight { color: #b8860b; font-weight: bold; }
+
+    footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ccc; font-size: 0.85rem; color: #666; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>紫微丹道·十大天命修行格局</h1>
+    <div class="meta">卷一：日月并明格 · 纯阳炼形</div>
+    <div class="meta">照辅先生 撰 · 编号 004/144</div>
+</header>
+
+<div class="abstract">
+    <strong>格局总论：</strong> 
+    此局乃“紫微在午”星系。命主天同巨门坐命于丑宫，福德宫于卯位坐太阳天梁。
+    其神韵在于<strong>“日月并明”</strong>：福德宫（体）坐拥日出扶桑，三合月朗天门，元神纯阳无阴；命宫（用）同巨居丑墓，肉身隐痛修持。
+    此乃<strong>“纯阳”</strong>根器，性功主光明，命功主去湿，宜修光寿无量之道。
+</div>
+
+<!-- 星盘图鉴 -->
+<div class="chart-container">
+    <div class="zw-grid">
+        <!-- 第一行：巳 午 未 申 -->
+        <div class="cell"><div class="stars main-star">天机</div><div class="dizhi">巳</div></div>
+        <div class="cell"><div class="stars main-star">紫微</div><div class="dizhi">午</div></div>
+        <div class="cell"><div class="stars borrow-star">[借]<br>同巨</div><div class="dizhi">未</div></div>
+        <div class="cell"><div class="stars main-star">破军</div><div class="dizhi">申</div></div>
+
+        <!-- 第二行：辰 (中) 酉 -->
+        <div class="cell"><div class="stars main-star">七杀</div><div class="dizhi">辰</div></div>
+        <div class="center-block">
+            <div class="center-text">
+                <strong>丹道隐义</strong>
+                体(福德)：卯宫阳梁，日出扶桑。<br>
+                用(命宫)：丑宫同巨，墓库隐修。<br>
+                照(三方)：亥宫太阴，月朗天门。<br>
+                <span class="note">日月并明：纯阳之体</span>
+            </div>
+        </div>
+        <div class="cell"><div class="stars main-star"></div><div class="dizhi">酉</div></div>
+
+        <!-- 第三行：卯 (中) 戌 -->
+        <div class="cell is-fude"><div class="stars main-star">太阳<br>天梁</div><div class="dizhi">卯</div></div>
+        <div class="cell"><div class="stars main-star">廉贞<br>天府</div><div class="dizhi">戌</div></div>
+
+        <!-- 第四行：寅 丑 子 亥 -->
+        <div class="cell"><div class="stars main-star">武曲<br>天相</div><div class="dizhi">寅</div></div>
+        <div class="cell is-ming"><div class="stars main-star">天同<br>巨门</div><div class="dizhi">丑</div></div>
+        <div class="cell"><div class="stars main-star">贪狼</div><div class="dizhi">子</div></div>
+        <div class="cell"><div class="stars main-star">太阴</div><div class="dizhi">亥</div></div>
+    </div>
+</div>
+
+<article>
+    <h2>一、 性功：福德宫（卯宫阳梁）—— 纯阳元神</h2>
+    <p>性功者，修心炼神也。此局福德坐守东方震宫（卯），主星太阳（旺）、天梁（庙）。乃<strong>“日出扶桑”</strong>之正格。</p>
+    
+    <h3>1. 阳梁居卯：光照大千</h3>
+    <p>太阳为纯阳之火，天梁为清高之神。
+    <strong>丹道义：</strong> 命主元神先天具备极高的能量层级，如旭日东升，驱散一切阴霾。天梁同宫，示此光芒非霸道之烈日，而是慈悲之暖阳。命主道心坚固，先天具有<strong>“度人”</strong>之宏愿。</p>
+
+    <h3>2. 月朗天门：真阴助阳</h3>
+    <p>福德三方之亥宫，坐太阴（庙）。
+    <strong>丹道义：</strong> 亥宫为天门，太阴居此，名为“月朗天门”。
+    卯宫太阳与亥宫太阴，在福德三方完美交汇。此乃<strong>“日月并明”</strong>。命主之灵台，时刻沐浴在日月精华之中，不假外求，自性具足。</p>
+
+    <h2>二、 命功：命宫（丑宫同巨）—— 墓库炼形</h2>
+    <p>命功者，修身炼气也。此局命宫在丑，乃金之墓库。天同、巨门落陷于此，肉身炉鼎呈现<strong>“湿寒”</strong>之象。</p>
+
+    <h3>1. 同巨居丑：云遮雾绕</h3>
+    <p>天同（水）与巨门（水/暗）同宫。
+    <strong>丹道义：</strong> 命主之肉身或识神，常感隐痛或压抑。此乃上天特设之<strong>“磨刀石”</strong>。赐予命主完美的元神（阳梁），却配以残缺的肉身（同巨），意在<strong>“借苦修行”</strong>。命主须在红尘的琐碎与误解中，验证元神之光明。</p>
+
+    <h3>2. 丑未相冲：开库生阳</h3>
+    <p>命宫（丑）与对宫（未）相冲。
+    <strong>丹道义：</strong> 丑未冲，土气激荡。命主之修行，重在<strong>“开库”</strong>。利用福德宫（卯）的木气，去克疏命宫（丑）的湿土。以元神之阳光，照亮肉身之黑暗。</p>
+
+    <h2>三、 丹道实修指引</h2>
+
+    <h3>1. 性功：金光神咒</h3>
+    <p><strong>功法：</strong> <strong>【存思日精】</strong>。
+    针对卯宫太阳。晨起面东，存思红日入口，化为金光覆映全身。命主先天与金光相应，修此法如鱼得水。</p>
+
+    <h3>2. 命功：去湿排寒</h3>
+    <p><strong>功法：</strong> <strong>【易筋震阳】</strong>。
+    针对丑宫同巨之湿寒。宜修习动功（如易筋经），以震动生阳，逼出体内阴邪。饮食宜温阳，忌生冷。</p>
+
+    <h2>四、 附录：乾坤分判（男女丹法之别）</h2>
+    <p>此格日月并明，然男女命之修持路径，因“乾坤”属性不同，而有天渊之别。</p>
+
+    <table class="gender-table">
+        <thead>
+            <tr>
+                <th>维度</th>
+                <th>乾道（男命）</th>
+                <th>坤道（女命）</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="male-row">
+                <td><strong>元神特质</strong></td>
+                <td>表里如一，纯阳正气<br>顺应天道，领袖风范</td>
+                <td><span class="highlight">外阴内阳，丈夫之志</span><br>独立刚强，不让须眉</td>
+            </tr>
+            <tr class="female-row">
+                <td><strong>修真难点</strong></td>
+                <td>命宫湿土重，易漏精<br>需防肾虚湿热</td>
+                <td>情关难过（太阴强）<br>需斩断对情感的依恋</td>
+            </tr>
+            <tr class="male-row">
+                <td><strong>核心功法</strong></td>
+                <td><strong>炼精化气</strong><br>以日火蒸腾肾水</td>
+                <td><strong>斩赤龙</strong><br><span class="highlight">以日火炼化经血</span></td>
+            </tr>
+            <tr class="female-row">
+                <td><strong>世俗表现</strong></td>
+                <td>贵格，利公职、学术<br>亦能兼顾家庭</td>
+                <td>孤格，利修行、独身<br>巾帼不让须眉</td>
+            </tr>
+            <tr class="male-row">
+                <td><strong>成道概率</strong></td>
+                <td><strong>极高</strong><br>顺水推舟，易得正果</td>
+                <td><strong>极高</strong><br>逆流而上，更显奇迹</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>判曰：</strong>
+    同巨丑宫守墓田，元神卯位日当天。<br>
+    亥宫月朗来相照，炼尽阴渣证真道。</p>
+</article>
+
+<footer>
+    <p>照辅先生 谨按：<br>
+    “日月并明”之局，修真之“纯阳”。</p>
+</footer>
+
+</body>
+</html>
