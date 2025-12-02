@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>紫微丹道·十大天命修行格局（卷一） - 照辅先生</title>
+<style>
+    /* --- 核心样式库 --- */
+    :root {
+        --bg-color: #f9f7f2; /* 宣纸白 */
+        --text-main: #2c2c2c; /* 墨色 */
+        --text-sub: #5d4037; /* 褐土 */
+        --border-color: #5d4037;
+        --ming-bg: #e8dede; /* 命宫底 */
+        --fude-bg: #fff8e1; /* 福德底 */
+        --accent-red: #8e352e; /* 丹砂 */
+        --accent-gold: #b8860b; /* 鎏金 */
+        --font-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        font-family: var(--font-serif);
+        line-height: 1.6;
+        padding: 20px;
+    }
+
+    /* --- 论文头部 --- */
+    header {
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+        text-align: center;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        font-size: clamp(1.5rem, 4vw, 2.2rem);
+        color: var(--text-main);
+        margin-bottom: 10px;
+    }
+
+    .meta {
+        font-size: 0.9rem;
+        color: var(--text-sub);
+        font-weight: bold;
+    }
+
+    /* --- 摘要框 --- */
+    .abstract {
+        max-width: 700px;
+        margin: 0 auto 40px auto;
+        padding: 20px;
+        background: #fff;
+        border-left: 5px solid var(--accent-red);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        font-size: 0.95rem;
+        text-align: justify;
+    }
+
+    /* --- 星盘图鉴 (核心) --- */
+    .chart-container {
+        max-width: 600px;
+        margin: 0 auto 50px auto;
+        border: 2px solid var(--border-color);
+        background-color: var(--border-color);
+        padding: 2px;
+    }
+
+    .zw-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, minmax(80px, 1fr));
+        gap: 1px;
+        background-color: var(--border-color);
+        aspect-ratio: 1/1;
+    }
+
+    .cell {
+        background-color: #fffbf0;
+        position: relative;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 0.85rem;
+    }
+
+    /* 宫位高亮 */
+    .is-ming {
+        background-color: var(--ming-bg);
+        box-shadow: inset 0 0 0 2px var(--accent-red);
+    }
+    .is-ming::before {
+        content: "命宫 (用)";
+        position: absolute;
+        top: 0; left: 0;
+        background: var(--accent-red);
+        color: #fff;
+        font-size: 0.6rem;
+        padding: 1px 3px;
+    }
+
+    .is-fude {
+        background-color: var(--fude-bg);
+        box-shadow: inset 0 0 0 2px var(--accent-gold);
+    }
+    .is-fude::before {
+        content: "福德 (体)";
+        position: absolute;
+        top: 0; left: 0;
+        background: var(--accent-gold);
+        color: #333;
+        font-size: 0.6rem;
+        padding: 1px 3px;
+    }
+
+    .is-jia {
+        background-color: #f0f4c3; /* 夹宫色 */
+    }
+
+    .dizhi {
+        position: absolute;
+        bottom: 2px;
+        right: 2px;
+        font-size: 0.75rem;
+        color: #999;
+        font-weight: bold;
+    }
+
+    .stars { font-weight: bold; width: 100%; }
+    .main-star { color: #000; }
+    .borrow-star { color: #666; font-weight: normal; font-size: 0.9em; }
+
+    /* 中宫注解 */
+    .center-block {
+        grid-column: 2 / 4;
+        grid-row: 2 / 4;
+        background-color: #fff;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow-y: auto;
+    }
+    .center-text {
+        font-size: clamp(12px, 3vw, 15px);
+        color: var(--text-sub);
+        line-height: 1.6;
+    }
+    .center-text strong { color: var(--accent-red); display: block; margin-bottom: 5px; font-size: 1.1em; }
+
+    /* --- 正文排版 --- */
+    article {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        color: var(--text-sub);
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        color: var(--accent-red);
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    p { margin-bottom: 15px; text-align: justify; }
+
+    ul { padding-left: 20px; margin-bottom: 20px; }
+    li { margin-bottom: 8px; }
+
+    /* --- 脚注 --- */
+    footer {
+        text-align: center;
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 1px solid #ccc;
+        font-size: 0.9rem;
+        color: #666;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>紫微丹道·十大天命修行格局</h1>
+    <div class="meta">卷一：机月同梁格 · 经师法脉</div>
+    <div class="meta">照辅先生 撰 · 编号 001/144</div>
+</header>
+
+<div class="abstract">
+    <strong>格局总论：</strong> 
+    此局乃“紫破在丑”星系之变格。命主天机独坐子宫，福德宫于寅位为空宫，借对宫（申）之天同、天梁。
+    其殊胜之处在于：福德宫虽空，却被丑宫之“紫微破军”与卯宫之“天府”左右夹持，构成<strong>“紫府夹福德”</strong>之极贵格局。
+    此乃“帝王（紫微）与国库（天府）守护元神”之象，主命主先天道根深厚，必有正统法脉护持，最宜修习经教、著书立说，为一代<strong>“经师”</strong>。
+</div>
+
+<!-- 星盘图鉴 -->
+<div class="chart-container">
+    <div class="zw-grid">
+        <!-- 第一行：巳 午 未 申 -->
+        <div class="cell"><div class="stars main-star">廉贞<br>贪狼</div><div class="dizhi">巳</div></div>
+        <div class="cell"><div class="stars main-star">巨门</div><div class="dizhi">午</div></div>
+        <div class="cell"><div class="stars"></div><div class="dizhi">未</div></div>
+        <div class="cell"><div class="stars main-star">天同<br>天梁</div><div class="dizhi">申</div></div>
+
+        <!-- 第二行：辰 (中) 酉 -->
+        <div class="cell"><div class="stars main-star">太阴</div><div class="dizhi">辰</div></div>
+        <div class="center-block">
+            <div class="center-text">
+                <strong>丹道隐义</strong>
+                体（福德）：寅宫借同梁，紫府夹持。<br>
+                用（命宫）：天机居子，水木清华。<br>
+                <span style="color:#999; font-size:0.9em;">三方四正：机月同梁全会</span>
+            </div>
+        </div>
+        <div class="cell"><div class="stars main-star">武曲<br>七杀</div><div class="dizhi">酉</div></div>
+
+        <!-- 第三行：卯 (中) 戌 -->
+        <div class="cell is-jia"><div class="stars main-star">天府</div><div class="dizhi">卯</div></div>
+        <div class="cell"><div class="stars main-star">太阳</div><div class="dizhi">戌</div></div>
+
+        <!-- 第四行：寅 丑 子 亥 -->
+        <div class="cell is-fude"><div class="stars borrow-star">[借]<br>天同<br>天梁</div><div class="dizhi">寅</div></div>
+        <div class="cell is-jia"><div class="stars main-star">紫微<br>破军</div><div class="dizhi">丑</div></div>
+        <div class="cell is-ming"><div class="stars main-star">天机</div><div class="dizhi">子</div></div>
+        <div class="cell"><div class="stars"></div><div class="dizhi">亥</div></div>
+    </div>
+</div>
+
+<article>
+    <h2>一、 本宫内景：福德宫（寅宫空宫）</h2>
+    <p>在道藏斗数中，福德宫为“元神”之驻地。此局福德在寅，虽无主星，却暗藏玄机。</p>
+    
+    <h3>1. 借星安神：同梁解厄</h3>
+    <p>寅宫借入申宫之<strong>天同（福星）</strong>与<strong>天梁（荫星）</strong>。
+    天梁乃“南斗司寿之星”，主解厄、医药、神明；天同乃“南斗益算之星”，主福报、赤子。
+    二星同临福德，示命主之元神先天具备<strong>“慈悲”</strong>与<strong>“纯真”</strong>之质。天梁之清高，使其不染俗尘；天同之乐天，使其修行不苦。</p>
+
+    <h3>2. 紫府夹拱：金光护体</h3>
+    <p>此乃本局最大之亮点。福德宫（寅）被<strong>丑宫之紫微破军</strong>与<strong>卯宫之天府</strong>所夹。
+    <strong>紫微</strong>为北极帝座，<strong>天府</strong>为南斗令主。南北二斗主星左右护持元神，在丹道内景中，此为<strong>“金光护体”</strong>之象。
+    示命主修行路上，必有<strong>“官方”</strong>（正统道教或高维神明）力量护法，外魔难侵。凡夫得紫府夹命主富贵，修士得紫府夹福德主<strong>“道果圆满”</strong>。</p>
+
+    <h2>二、 命宫大用：天机居子（水木清华）</h2>
+    <p>命宫为“识神”，为修道之“器”。天机星独坐子宫。</p>
+
+    <h3>1. 智慧通灵：经教之师</h3>
+    <p>天机主“智”，五行属木；子宫属水。水生木，木得水滋，郁郁葱葱。
+    此局命主之识神极度聪慧，逻辑缜密，记忆力超群。对于晦涩难懂之《道藏》经文、丹道术语，常能<strong>“一目十行，过目不忘”</strong>。
+    天机亦主“变”，示命主善于将古老之丹法，转化为现代人易懂之语言，故为<strong>“经师”</strong>之命。</p>
+
+    <h3>2. 三方会照：机月同梁</h3>
+    <p>命宫（子）会照申宫（同梁）与辰宫（太阴）。
+    此乃标准之<strong>“机月同梁”</strong>格。古诀云：“机月同梁作吏人”。
+    然在道门，此格主<strong>“清静无为”</strong>。太阴（月）主静，天梁（荫）主清，天同（福）主乐，天机（智）主慧。四星汇聚，命主天生喜静不喜动，喜书不喜闹，乃是<strong>“书房修道”</strong>的上上之选。</p>
+
+    <h2>三、 丹道实修指引</h2>
+
+    <h3>1. 性功：研经悟道</h3>
+    <p><strong>功法：</strong> <strong>【阅藏】</strong>。
+    命主之天命在于“解悟”。不宜盲目苦修肉体，而应深入经藏。
+    利用天机之智，钻研《黄庭经》、《参同契》等经典。紫府夹福德，示命主在阅读中易得祖师“意传”，产生顿悟。</p>
+
+    <h3>2. 命功：坎离既济</h3>
+    <p><strong>功法：</strong> <strong>【温养泥丸】</strong>。
+    命宫天机在子（坎水），福德在寅（借申宫金水）。水气过旺，易生寒湿。
+    需借三方之<strong>太阳（戌宫）</strong>与<strong>巨门（午宫）</strong>。虽然太阳在戌落陷，但巨门在午为石中隐玉。
+    修持时，宜观想午宫之火（巨门/丹田），温暖子宫之水（天机/泥丸），以成既济之功。</p>
+
+    <h3>3. 建议：著书立说</h3>
+    <p>命主既为“经师”之格，当以<strong>“文字般若”</strong>度人。
+    整理典籍、注解经书、或传播正信道家文化，皆是积功累德之捷径。
+    <strong>紫府夹持，笔下有神；机月同梁，智慧如海。</strong></p>
+</article>
+
+<footer>
+    <p>照辅先生 谨按：<br>
+    此局虽利修行，然天机灵动，易思虑过重（神经衰弱）。<br>
+    务必守住“天同”之福，保持童心，方得长养。</p>
+</footer>
+
+</body>
+</html>
