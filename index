@@ -1,38 +1,196 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>Luckway 论文库</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>道法自然，易理经纬</title>
     <style>
-        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1 { color: #333; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin: 10px 0; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        a { text-decoration: none; color: #0070f3; font-size: 18px; }
-        a:hover { text-decoration: underline; }
+        /* 全局重置 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 页面主体样式 */
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            /* 皇家紫渐变背景：营造神秘与高贵的氛围 */
+            background: linear-gradient(135deg, #1a0b2e 0%, #4b1d6e 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* 头部标题区域 */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            font-family: "Kaiti", "STKaiti", serif; /* 使用楷体增加传统韵味 */
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* 主要内容网格布局 */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        /* 卡片样式 (毛玻璃效果) */
+        .card {
+            background: rgba(255, 255, 255, 0.05); /* 极低透明度背景 */
+            backdrop-filter: blur(10px); /* 磨砂效果 */
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1); /* 微弱的白边框 */
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); /* 阴影 */
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 200px;
+        }
+
+        /* 卡片悬停效果 */
+        .card:hover {
+            transform: translateY(-10px); /* 上浮 */
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* 卡片标题 */
+        .card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        /* 卡片描述 */
+        .card p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        /* 待开发板块的样式 */
+        .card.disabled {
+            cursor: default;
+            opacity: 0.7;
+        }
+        
+        .card.disabled:hover {
+            transform: none;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* "敬请期待" 标签 */
+        .badge {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 5px 12px;
+            font-size: 0.8rem;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            color: #aaa;
+        }
+
+        /* 底部版权 */
+        footer {
+            margin-top: 60px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* 简单的入场动画 */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .container { padding: 0 10px; }
+        }
     </style>
 </head>
 <body>
 
-    <h1>Luckway 论文列表</h1>
-    <p>这里收录了 144 篇相关论文。</p>
+    <header>
+        <h1>道法自然，易理经纬</h1>
+        <div class="subtitle">LUCKWAY.ORG</div>
+    </header>
 
-    <ul>
-        <!-- 这里是链接列表 -->
+    <main class="container">
         
-        <!-- 如果你用了 papers 文件夹，链接就是 papers/paper1.html -->
-        <li>
-            <span>001. </span>
-            <a href="papers/paper1.html">第一篇论文的标题</a>
-        </li>
+        <!-- 板块 1：道家文章 (已激活) -->
+        <!-- 注意：这里链接指向了你要求的路径，请确保你的 GitHub 文件夹结构正确 -->
+        <a href="papers/ziweidandao/paper001.html" class="card">
+            <h2>道家文章</h2>
+            <p>大道至简，衍化无穷<br>阅览道家经典与修行感悟</p>
+        </a>
 
-        <!-- 以后每上传一篇，就在这里加一行 -->
-        <li>
-            <span>002. </span>
-            <a href="papers/paper2.html">第二篇论文的标题 (待上传)</a>
-        </li>
-        
-    </ul>
+        <!-- 板块 2：七维经纬占卜 (待开发) -->
+        <div class="card disabled">
+            <h2>七维经纬占卜</h2>
+            <p>探究时空维度，洞察吉凶祸福</p>
+            <span class="badge">后续开发</span>
+        </div>
+
+        <!-- 板块 3：紫微命理分析 (待开发) -->
+        <div class="card disabled">
+            <h2>紫微命理分析</h2>
+            <p>帝王之术，星盘流转<br>解析命盘十二宫之奥秘</p>
+            <span class="badge">后续开发</span>
+        </div>
+
+        <!-- 板块 4：奇门风水调运 (待开发) -->
+        <div class="card disabled">
+            <h2>奇门风水调运</h2>
+            <p>夺天地造化，改环境气场<br>运筹帷幄之中</p>
+            <span class="badge">后续开发</span>
+        </div>
+
+        <!-- 板块 5：经世致用学科 (待开发) -->
+        <div class="card disabled">
+            <h2>经世致用学科</h2>
+            <p>知行合一，实学实修<br>融合传统智慧与现代应用</p>
+            <span class="badge">后续开发</span>
+        </div>
+
+    </main>
+
+    <footer>
+        &copy; 2025 Luckway.org | 道法自然
+    </footer>
 
 </body>
 </html>
