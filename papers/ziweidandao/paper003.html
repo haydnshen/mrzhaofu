@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>紫微丹道·十大天命修行格局（卷一） - 照辅先生</title>
+<style>
+    /* --- 核心样式库：道家极简风 --- */
+    :root {
+        --bg-color: #f9f7f2;
+        --text-main: #2c2c2c;
+        --text-sub: #5d4037;
+        --border-color: #4e342e;
+        --ming-bg: #e8dede;
+        --fude-bg: #fff8e1;
+        --accent-red: #8e352e;
+        --accent-gold: #b8860b;
+        --font-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        font-family: var(--font-serif);
+        line-height: 1.6;
+        padding: 20px;
+    }
+
+    header {
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+        text-align: center;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        font-size: clamp(1.2rem, 4vw, 2.2rem);
+        color: var(--text-main);
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .meta { font-size: 0.9rem; color: var(--text-sub); font-weight: bold; }
+
+    .abstract {
+        max-width: 700px;
+        margin: 0 auto 40px auto;
+        padding: 20px;
+        background: #fff;
+        border-left: 5px solid var(--accent-red);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        font-size: 0.95rem;
+        text-align: justify;
+    }
+
+    /* --- 星盘图鉴 --- */
+    .chart-container {
+        max-width: 500px;
+        margin: 0 auto 50px auto;
+        border: 2px solid var(--border-color);
+        background-color: var(--border-color);
+        padding: 2px;
+    }
+
+    .zw-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        aspect-ratio: 1/1;
+        gap: 1px;
+        background-color: var(--border-color);
+    }
+
+    .cell {
+        background-color: #fffbf0;
+        position: relative;
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .is-ming { background-color: var(--ming-bg); box-shadow: inset 0 0 0 1px var(--accent-red); }
+    .is-ming::before {
+        content: "命宫"; position: absolute; top: 0; left: 0;
+        background: var(--accent-red); color: #fff; font-size: 0.6rem; padding: 0 2px;
+    }
+
+    .is-fude { background-color: var(--fude-bg); box-shadow: inset 0 0 0 1px var(--accent-gold); }
+    .is-fude::before {
+        content: "福德"; position: absolute; top: 0; left: 0;
+        background: var(--accent-gold); color: #333; font-size: 0.6rem; padding: 0 2px;
+    }
+
+    .dizhi { position: absolute; bottom: 0; right: 2px; font-size: 0.7rem; color: #999; font-weight: bold; }
+
+    .stars { font-weight: bold; width: 100%; line-height: 1.1; font-size: 0.8rem; }
+    .main-star { color: #000; }
+    .sub-star { color: #555; font-size: 0.8em; font-weight: normal; display: block; transform: scale(0.9); }
+
+    .center-block {
+        grid-column: 2 / 4; grid-row: 2 / 4;
+        background-color: #fff; padding: 5px;
+        display: flex; flex-direction: column;
+        justify-content: center; align-items: center; text-align: center;
+    }
+    
+    .center-text {
+        font-size: clamp(10px, 2.8vw, 14px);
+        color: var(--text-sub); line-height: 1.5; width: 100%;
+    }
+    
+    .center-text strong { color: var(--accent-red); display: block; margin-bottom: 4px; font-size: 1.1em; }
+    .note { color: #888; font-size: 0.9em; margin-top: 4px; display: block;}
+
+    article { max-width: 800px; margin: 0 auto; }
+    h2 { font-size: 1.3rem; color: var(--text-sub); border-bottom: 1px solid #ddd; padding-bottom: 8px; margin: 35px 0 15px 0; }
+    h3 { font-size: 1.1rem; color: var(--accent-red); margin: 20px 0 10px 0; }
+    p { margin-bottom: 12px; text-align: justify; font-size: 0.95rem; }
+    ul { padding-left: 18px; margin-bottom: 15px; }
+    li { margin-bottom: 5px; font-size: 0.95rem; }
+
+    footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ccc; font-size: 0.85rem; color: #666; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>紫微丹道·十大天命修行格局</h1>
+    <div class="meta">卷一：廉贞贪狼格 · 术法神通</div>
+    <div class="meta">照辅先生 撰 · 编号 003/144</div>
+</header>
+
+<div class="abstract">
+    <strong>格局总论：</strong> 
+    此局乃“紫微在午”星系。命主廉贞天府坐命于戌宫，福德宫于子位独坐贪狼。
+    其神韵在于<strong>“取坎填离”</strong>：福德宫（体）贪狼居子水，乃坎宫真阳，元精浩瀚；命宫（用）廉府居戌库，乃火土丹鼎，封固严密。
+    此乃<strong>“法师”</strong>根器，性功主采药，命功主封炉，宜修炼精化气之神仙术。
+</div>
+
+<!-- 星盘图鉴 -->
+<div class="chart-container">
+    <div class="zw-grid">
+        <!-- 第一行：巳 午 未 申 -->
+        <div class="cell"><div class="stars main-star">天机</div><div class="dizhi">巳</div></div>
+        <div class="cell"><div class="stars main-star">紫微</div><div class="dizhi">午</div></div>
+        <div class="cell"><div class="stars main-star"></div><div class="dizhi">未</div></div>
+        <div class="cell"><div class="stars main-star">破军</div><div class="dizhi">申</div></div>
+
+        <!-- 第二行：辰 (中) 酉 -->
+        <div class="cell"><div class="stars main-star">七杀</div><div class="dizhi">辰</div></div>
+        <div class="center-block">
+            <div class="center-text">
+                <strong>丹道隐义</strong>
+                体(福德)：子宫贪狼，坎水藏金。<br>
+                用(命宫)：戌宫廉府，火土丹鼎。<br>
+                冲(对宫)：紫微在午，水火既济。<br>
+                <span class="note">三方：杀破狼会，动能巨大</span>
+            </div>
+        </div>
+        <div class="cell"><div class="stars main-star">太阳<br>天梁</div><div class="dizhi">酉</div></div>
+
+        <!-- 第三行：卯 (中) 戌 -->
+        <div class="cell"><div class="stars main-star">太阳<br>天梁</div><div class="dizhi">卯</div></div>
+        <div class="cell is-ming"><div class="stars main-star">廉贞<br>天府</div><div class="dizhi">戌</div></div>
+
+        <!-- 第四行：寅 丑 子 亥 -->
+        <div class="cell"><div class="stars main-star">武曲<br>天相</div><div class="dizhi">寅</div></div>
+        <div class="cell"><div class="stars main-star">天同<br>巨门</div><div class="dizhi">丑</div></div>
+        <div class="cell is-fude"><div class="stars main-star">贪狼</div><div class="dizhi">子</div></div>
+        <div class="cell"><div class="stars main-star">太阴</div><div class="dizhi">亥</div></div>
+    </div>
+</div>
+
+<article>
+    <h2>一、 性功：福德宫（子宫贪狼）—— 坎水藏真</h2>
+    <p>性功者，修心炼神也。此局福德独坐贪狼，五行属水/木，居子水帝旺之乡，乃<strong>“泛水桃花”</strong>之变格，丹道谓之<strong>“水中精元”</strong>。</p>
+    
+    <h3>1. 贪狼居子：元精浩瀚</h3>
+    <p>贪狼为北斗第一星，主欲望，亦主修道。居子宫坎位，水木相生，生机无限。
+    <strong>丹道义：</strong> 命主先天“肾水”极足，元精充盈。此“欲”非淫欲，乃生生不息之“道机”。修性功之要，在于不压抑贪狼之生机，而将其引导入库（戌宫），化为长生之药。</p>
+
+    <h3>2. 紫微冲照：水火既济</h3>
+    <p>福德宫（子）受财帛宫（午）紫微帝星直冲。
+    <strong>丹道义：</strong> 子午冲，即坎离冲。帝王之火（紫微）时刻照耀贪狼之水。示命主之元神虽活跃，但终受帝王意志（天命）之感召，有“奉旨修道”之象。</p>
+
+    <h2>二、 命功：命宫（戌宫廉府）—— 丹鼎封固</h2>
+    <p>命功者，修身炼气也。此局命宫在戌，其肉身炉鼎之奥秘，全在<strong>“火土之库”</strong>的封锁能力。</p>
+
+    <h3>1. 廉府守库：严密丹鼎</h3>
+    <p>廉贞（火）与天府（土）同宫于戌（火库）。
+    <strong>丹道义：</strong> 廉贞为“真火”，天府为“炉壁”，戌宫为“地网”。此乃天然之<strong>“炼丹红炉”</strong>。命主肉身具备极强的“储能”与“封锁”能力。命功修持之首要，在于<strong>“闭关锁阳”</strong>。利用天府之库，将子宫贪狼之水牢牢锁住，不令外泄。</p>
+
+    <h3>2. 寅午戌火局：炼化元精</h3>
+    <p>命宫（戌）、官禄（寅）、财帛（午）三方会照，构成了<strong>“寅午戌”火局</strong>。
+    <strong>丹道义：</strong> 三方皆火，烘烤福德之水（子）。此乃<strong>“海底烧锅”</strong>之象。修持时，引动寅宫长生之火，助燃戌宫丹鼎，将贪狼之水化为元气，沿督脉逆流而上，还精补脑。</p>
+
+    <h2>三、 丹道实修指引</h2>
+
+    <h3>1. 性功：贪狼采药</h3>
+    <p><strong>功法：</strong> <strong>【活子时】</strong>。
+    针对子宫贪狼。每当夜半子时或身中阳生之时（贪狼动），意守会阴（子位）。不随欲望流转，而是以神光（紫微）内照，采此一点真阳。</p>
+
+    <h3>2. 命功：天府封炉</h3>
+    <p><strong>功法：</strong> <strong>【锁阳桩】</strong>。
+    针对戌宫廉府。站桩时，意念如铁围山（天府），将丹田封死。配合提肛缩肾，确保元精只在体内循环，滴水不漏。</p>
+
+    <h3>3. 建议：借术入道</h3>
+    <p>命主贪狼坐福德，灵觉极高。宜从<strong>“术数、符箓、医药”</strong>入手，以术证道。切记“天府库门紧闭”，严守戒律，方成大道。</p>
+</article>
+
+<footer>
+    <p>照辅先生 谨按：<br>
+    贪狼居子水茫茫，廉府戌宫锁大江。<br>
+    紫微午位垂帝象，水火既济炼金丹。</p>
+</footer>
+
+</body>
+</html>
