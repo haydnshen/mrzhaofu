@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>紫微丹道·十大天命修行格局（卷一） - 照辅先生</title>
+<style>
+    /* --- 核心样式库：道家极简风 --- */
+    :root {
+        --bg-color: #f9f7f2;
+        --text-main: #2c2c2c;
+        --text-sub: #5d4037;
+        --border-color: #4e342e;
+        --ming-bg: #e8dede;
+        --fude-bg: #fff8e1;
+        --accent-red: #8e352e;
+        --accent-gold: #b8860b;
+        --font-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        font-family: var(--font-serif);
+        line-height: 1.6;
+        padding: 20px;
+    }
+
+    header {
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+        text-align: center;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        font-size: clamp(1.2rem, 4vw, 2.2rem);
+        color: var(--text-main);
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .meta { font-size: 0.9rem; color: var(--text-sub); font-weight: bold; }
+
+    .abstract {
+        max-width: 700px;
+        margin: 0 auto 40px auto;
+        padding: 20px;
+        background: #fff;
+        border-left: 5px solid var(--accent-red);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        font-size: 0.95rem;
+        text-align: justify;
+    }
+
+    /* --- 星盘图鉴 --- */
+    .chart-container {
+        max-width: 500px;
+        margin: 0 auto 50px auto;
+        border: 2px solid var(--border-color);
+        background-color: var(--border-color);
+        padding: 2px;
+    }
+
+    .zw-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        aspect-ratio: 1/1;
+        gap: 1px;
+        background-color: var(--border-color);
+    }
+
+    .cell {
+        background-color: #fffbf0;
+        position: relative;
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .is-ming { background-color: var(--ming-bg); box-shadow: inset 0 0 0 1px var(--accent-red); }
+    .is-ming::before {
+        content: "命宫"; position: absolute; top: 0; left: 0;
+        background: var(--accent-red); color: #fff; font-size: 0.6rem; padding: 0 2px;
+    }
+
+    .is-fude { background-color: var(--fude-bg); box-shadow: inset 0 0 0 1px var(--accent-gold); }
+    .is-fude::before {
+        content: "福德"; position: absolute; top: 0; left: 0;
+        background: var(--accent-gold); color: #333; font-size: 0.6rem; padding: 0 2px;
+    }
+
+    .is-jia { background-color: #f0f4c3; }
+
+    .dizhi { position: absolute; bottom: 0; right: 2px; font-size: 0.7rem; color: #999; font-weight: bold; }
+
+    .stars { font-weight: bold; width: 100%; line-height: 1.1; font-size: 0.8rem; }
+    .main-star { color: #000; }
+    .sub-star { color: #555; font-size: 0.8em; font-weight: normal; display: block; transform: scale(0.9); }
+    .borrow-star { color: #666; font-weight: normal; font-size: 0.8em; }
+
+    .center-block {
+        grid-column: 2 / 4; grid-row: 2 / 4;
+        background-color: #fff; padding: 5px;
+        display: flex; flex-direction: column;
+        justify-content: center; align-items: center; text-align: center;
+    }
+    
+    .center-text {
+        font-size: clamp(10px, 2.8vw, 14px);
+        color: var(--text-sub); line-height: 1.5; width: 100%;
+    }
+    
+    .center-text strong { color: var(--accent-red); display: block; margin-bottom: 4px; font-size: 1.1em; }
+    .note { color: #888; font-size: 0.9em; margin-top: 4px; display: block;}
+
+    article { max-width: 800px; margin: 0 auto; }
+    h2 { font-size: 1.3rem; color: var(--text-sub); border-bottom: 1px solid #ddd; padding-bottom: 8px; margin: 35px 0 15px 0; }
+    h3 { font-size: 1.1rem; color: var(--accent-red); margin: 20px 0 10px 0; }
+    p { margin-bottom: 12px; text-align: justify; font-size: 0.95rem; }
+    ul { padding-left: 18px; margin-bottom: 15px; }
+    li { margin-bottom: 5px; font-size: 0.95rem; }
+
+    footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ccc; font-size: 0.85rem; color: #666; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>紫微丹道·十大天命修行格局</h1>
+    <div class="meta">卷一：七杀紫相格 · 天师敕令</div>
+    <div class="meta">照辅先生 撰 · 编号 007/144</div>
+</header>
+
+<div class="abstract">
+    <strong>格局总论：</strong> 
+    此局乃“七杀仰斗”之格。命主七杀独坐午宫，福德宫廉贞独坐申宫。
+    其殊胜在于<strong>“将帅领印”</strong>：福德宫（体）坐廉贞“天官”，三合紫微天相“帝印”，元神具备敕令鬼神之权；命宫（用）坐七杀“大将”，识神具备斩妖除魔之威。
+    此乃<strong>“天师”</strong>根器，性功修符箓存思，命功修雷火煅炼，宜证雷法大道。
+</div>
+
+<!-- 星盘图鉴 -->
+<div class="chart-container">
+    <div class="zw-grid">
+        <!-- 第一行：巳 午 未 申 -->
+        <div class="cell"><div class="stars main-star">天机<br>天梁</div><div class="dizhi">巳</div></div>
+        <div class="cell is-ming"><div class="stars main-star">七杀<br><span class="sub-star">[大将]</span></div><div class="dizhi">午</div></div>
+        <div class="cell"><div class="stars main-star">太阳<br>太阴</div><div class="dizhi">未</div></div>
+        <div class="cell is-fude"><div class="stars main-star">廉贞<br><span class="sub-star">[天官]</span></div><div class="dizhi">申</div></div>
+
+        <!-- 第二行：辰 (中) 酉 -->
+        <div class="cell"><div class="stars main-star">紫微 天相<br><span class="sub-star">[帝印]</span></div><div class="dizhi">辰</div></div>
+        <div class="center-block">
+            <div class="center-text">
+                <strong>丹道隐义</strong>
+                体(福德)：廉贞居申，天官持印。<br>
+                用(命宫)：七杀居午，大将行令。<br>
+                三合：紫相拱照，天命授受。<br>
+                <span class="note">法脉：正一/神霄，符箓雷法</span>
+            </div>
+        </div>
+        <div class="cell"><div class="stars borrow-star">[借]<br>机巨</div><div class="dizhi">酉</div></div>
+
+        <!-- 第三行：卯 (中) 戌 -->
+        <div class="cell"><div class="stars main-star">天机 巨门</div><div class="dizhi">卯</div></div>
+        <div class="cell"><div class="stars main-star">破军</div><div class="dizhi">戌</div></div>
+
+        <!-- 第四行：寅 丑 子 亥 -->
+        <div class="cell"><div class="stars main-star">贪狼</div><div class="dizhi">寅</div></div>
+        <div class="cell"><div class="stars borrow-star">[借]<br>日月</div><div class="dizhi">丑</div></div>
+        <div class="cell"><div class="stars main-star">武曲 天府</div><div class="dizhi">子</div></div>
+        <div class="cell"><div class="stars main-star">天同</div><div class="dizhi">亥</div></div>
+    </div>
+</div>
+
+<article>
+    <h2>一、 性功：福德宫（申宫廉贞）—— 天官持印</h2>
+    <p>性功者，修心炼神也。此局福德宫坐<strong>廉贞</strong>，三合<strong>紫微、天相</strong>，乃“以神御鬼”之无上法门。</p>
+    
+    <h3>1. 廉贞居申：清白之火</h3>
+    <p>申宫属金，廉贞属火。火炼金地，名为“积富”，实指<strong>“积蓄元阳”</strong>。
+    廉贞在道教星象中对应“玉衡星君”，主“鬼神之事”。
+    命主之元神（体），先天具备与灵界沟通之能力。不同于太阴的“被动感应”，廉贞是<strong>“主动敕令”</strong>。元神如同一位严厉的天官，能镇压一切邪祟。</p>
+
+    <h3>2. 紫相拱照：天命授受</h3>
+    <p>福德宫三方会照夫妻宫（辰）之<strong>紫微、天相</strong>。
+    <ul>
+        <li><strong>紫微：</strong> 万神之主（帝）。</li>
+        <li><strong>天相：</strong> 玉玺印信（印）。</li>
+    </ul>
+    <strong>丹道义：</strong> 命主之元神（廉贞），背后有“天庭”背书。
+    修持性功时，须观想紫微大帝授印于己。画符之时，非己之力，乃代天行化。故此格最利修习<strong>“符箓”</strong>与<strong>“科仪”</strong>，一笔落下，鬼神皆惊。</p>
+
+    <h2>二、 命功：命宫（午宫七杀）—— 雷火煅炼</h2>
+    <p>命功者，修身炼气也。此局命宫在午，七杀独坐，乃“雄宿乾元”之正格，肉身炉鼎如同一座<strong>“雷火炼狱”</strong>。</p>
+
+    <h3>1. 离宫七杀：纯阳雷火</h3>
+    <p>午宫为离卦，主心，主火。七杀为金，主肃杀。
+    <strong>丹道义：</strong> 火炼真金。命主之肉身，先天阳气极盛，甚至带有“燥火”。
+    此火非凡火，乃<strong>“雷火”</strong>。命功修持之首要，在于<strong>“采雷”</strong>。
+    利用午宫之纯阳之气，修习<strong>“五雷正法”</strong>。引天地之雷气入体，煅烧凡骨，化为金刚法身。</p>
+
+    <h3>2. 子午冲激：坎离既济</h3>
+    <p>命宫（午/七杀）与迁移宫（子/武府）对冲。
+    <ul>
+        <li><strong>子宫：</strong> 武曲（金）+ 天府（土/库）。</li>
+    </ul>
+    <strong>丹道义：</strong> 七杀雷火太旺，必伤肺金。
+    须引子宫之<strong>“武府金水”</strong>上济。武曲为“财”，在命功中指“丰厚的精血”。
+    修持时，意守海底（子），将精血化为清凉之气，上冲午宫，正如“雷雨交加”，既壮大了雷威，又滋润了肉身。</p>
+
+    <h2>三、 丹道实修指引</h2>
+
+    <h3>1. 性功：存思紫微</h3>
+    <p><strong>功法：</strong> <strong>【九天应元法】</strong>。
+    静坐时，存思福德三方之<strong>紫微大帝</strong>，手持<strong>天相玉印</strong>，降临于申宫（福德）。
+    观想自身元神（廉贞）化为法身，接受天印。以此正气，镇压心魔，敕令身中三尸。</p>
+
+    <h3>2. 命功：雷火呼吸</h3>
+    <p><strong>功法：</strong> <strong>【金光神咒 + 闭息】</strong>。
+    针对午宫七杀。
+    吸气时，默念金光咒，观想金光入心（午）；闭息时，如雷霆积蓄；呼气时，发“哈”声（默念），将体内阴邪之气如雷劈般排出。
+    此法刚猛，须配合子宫（武府）之滋阴饮食，以防耗损。</p>
+
+    <h3>3. 建议：外法内修</h3>
+    <p>命主虽具“天师”之威（七杀），不可迷恋神通。
+    须守住福德宫廉贞之<strong>“清白”</strong>（申宫金生水）。
+    <strong>以符箓济世（用），以清静炼心（体）。</strong>
+    莫忘紫微天相之“正道”，方成一代高真。</p>
+</article>
+
+<footer>
+    <p>照辅先生 谨按：<br>
+    七杀午宫掌天雷，廉贞申位敕幽冥。<br>
+    紫微授印天相佐，高真天师证太平。</p>
+</footer>
+
+</body>
+</html>
