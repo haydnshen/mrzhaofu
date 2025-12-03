@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>紫微丹道·十大天命修行格局（卷一） - 照辅先生</title>
+<style>
+    /* --- 核心样式库：道家极简风 --- */
+    :root {
+        --bg-color: #f9f7f2;
+        --text-main: #2c2c2c;
+        --text-sub: #5d4037;
+        --border-color: #4e342e;
+        --ming-bg: #e8dede;
+        --fude-bg: #fff8e1;
+        --accent-red: #8e352e;
+        --accent-gold: #b8860b;
+        --font-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        font-family: var(--font-serif);
+        line-height: 1.6;
+        padding: 20px;
+    }
+
+    header {
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+        text-align: center;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        font-size: clamp(1.2rem, 4vw, 2.2rem);
+        color: var(--text-main);
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .meta { font-size: 0.9rem; color: var(--text-sub); font-weight: bold; }
+
+    .abstract {
+        max-width: 700px;
+        margin: 0 auto 40px auto;
+        padding: 20px;
+        background: #fff;
+        border-left: 5px solid var(--accent-red);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        font-size: 0.95rem;
+        text-align: justify;
+    }
+
+    /* --- 星盘图鉴 --- */
+    .chart-container {
+        max-width: 500px;
+        margin: 0 auto 50px auto;
+        border: 2px solid var(--border-color);
+        background-color: var(--border-color);
+        padding: 2px;
+    }
+
+    .zw-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        aspect-ratio: 1/1;
+        gap: 1px;
+        background-color: var(--border-color);
+    }
+
+    .cell {
+        background-color: #fffbf0;
+        position: relative;
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .is-ming { background-color: var(--ming-bg); box-shadow: inset 0 0 0 1px var(--accent-red); }
+    .is-ming::before {
+        content: "命宫"; position: absolute; top: 0; left: 0;
+        background: var(--accent-red); color: #fff; font-size: 0.6rem; padding: 0 2px;
+    }
+
+    .is-fude { background-color: var(--fude-bg); box-shadow: inset 0 0 0 1px var(--accent-gold); }
+    .is-fude::before {
+        content: "福德"; position: absolute; top: 0; left: 0;
+        background: var(--accent-gold); color: #333; font-size: 0.6rem; padding: 0 2px;
+    }
+
+    .dizhi { position: absolute; bottom: 0; right: 2px; font-size: 0.7rem; color: #999; font-weight: bold; }
+
+    .stars { font-weight: bold; width: 100%; line-height: 1.1; font-size: 0.8rem; }
+    .main-star { color: #000; }
+    .sub-star { color: #555; font-size: 0.8em; font-weight: normal; display: block; transform: scale(0.9); }
+
+    .center-block {
+        grid-column: 2 / 4; grid-row: 2 / 4;
+        background-color: #fff; padding: 5px;
+        display: flex; flex-direction: column;
+        justify-content: center; align-items: center; text-align: center;
+    }
+    
+    .center-text {
+        font-size: clamp(10px, 2.8vw, 14px);
+        color: var(--text-sub); line-height: 1.5; width: 100%;
+    }
+    
+    .center-text strong { color: var(--accent-red); display: block; margin-bottom: 4px; font-size: 1.1em; }
+    .note { color: #888; font-size: 0.9em; margin-top: 4px; display: block;}
+
+    article { max-width: 800px; margin: 0 auto; }
+    h2 { font-size: 1.3rem; color: var(--text-sub); border-bottom: 1px solid #ddd; padding-bottom: 8px; margin: 35px 0 15px 0; }
+    h3 { font-size: 1.1rem; color: var(--accent-red); margin: 20px 0 10px 0; }
+    p { margin-bottom: 12px; text-align: justify; font-size: 0.95rem; }
+
+    footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ccc; font-size: 0.85rem; color: #666; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>紫微丹道·十大天命修行格局（卷一）</h1>
+    <div class="meta">卷一：巨门日月格 · 灵媒通玄</div>
+    <div class="meta">照辅先生 撰 · 编号 009/144</div>
+</header>
+
+<div class="abstract">
+    <strong>格局总论：</strong> 
+    此局乃“巨门在亥”星系。命主巨门独坐亥宫，对宫太阳在巳。
+    其殊胜在于<strong>“神光内照”</strong>：福德宫天梁居丑（金库），三方完美汇聚巳宫太阳（旺）与酉宫太阴（庙）。
+    体（福德）得日月并明之照耀，元神极度光明；用（命宫）居亥水幽冥之门，以巨门之口传天道之音。
+    此乃<strong>“灵媒”</strong>与<strong>“传道”</strong>之顶级根器，宜修阴阳双修、出神入化之法。
+</div>
+
+<!-- 星盘图鉴 -->
+<div class="chart-container">
+    <div class="zw-grid">
+        <!-- 第一行：巳 午 未 申 -->
+        <div class="cell"><div class="stars main-star">太阳</div><div class="dizhi">巳</div></div>
+        <div class="cell"><div class="stars main-star">破军</div><div class="dizhi">午</div></div>
+        <div class="cell"><div class="stars main-star">天机</div><div class="dizhi">未</div></div>
+        <div class="cell"><div class="stars main-star">紫微 天府</div><div class="dizhi">申</div></div>
+
+        <!-- 第二行：辰 (中) 酉 -->
+        <div class="cell"><div class="stars main-star">武曲</div><div class="dizhi">辰</div></div>
+        <div class="center-block">
+            <div class="center-text">
+                <strong>丹道隐义</strong>
+                体(福德)：天梁居丑，日月并明来朝。<br>
+                用(命宫)：巨门居亥，幽冥之口。<br>
+                气机：巳亥冲，水火炼度。<br>
+                <span class="note">三方：亥卯未木局，灵机深藏</span>
+            </div>
+        </div>
+        <div class="cell"><div class="stars main-star">太阴</div><div class="dizhi">酉</div></div>
+
+        <!-- 第三行：卯 (中) 戌 -->
+        <div class="cell"><div class="stars main-star">天同</div><div class="dizhi">卯</div></div>
+        <div class="cell"><div class="stars main-star">贪狼</div><div class="dizhi">戌</div></div>
+
+        <!-- 第四行：寅 丑 子 亥 -->
+        <div class="cell"><div class="stars main-star">七杀</div><div class="dizhi">寅</div></div>
+        <div class="cell is-fude"><div class="stars main-star">天梁</div><div class="dizhi">丑</div></div>
+        <div class="cell"><div class="stars main-star">廉贞 天相</div><div class="dizhi">子</div></div>
+        <div class="cell is-ming"><div class="stars main-star">巨门</div><div class="dizhi">亥</div></div>
+    </div>
+</div>
+
+<article>
+    <h2>一、 性功：福德宫（丑宫天梁）—— 日月并明</h2>
+    <p>性功者，修心炼神也。此局福德宫坐天梁于丑，丑乃“金库”，天梁为“神明”。最妙者，在于其三方四正之气象。</p>
+    
+    <h3>1. 日月来朝：元神极贵</h3>
+    <p>福德宫（丑）之三合方，必为巳宫与酉宫。
+    <ul>
+        <li><strong>巳宫（迁移之对）：</strong> <strong>太阳</strong>（旺）。</li>
+        <li><strong>酉宫（夫妻）：</strong> <strong>太阴</strong>（庙）。</li>
+    </ul>
+    <strong>丹道义：</strong> 命主之元神（天梁），安坐于丑宫金库之中，左手持日（巳），右手持月（酉）。此乃<strong>“日月并明”</strong>照福德之大格。
+    示命主之元神先天具备极高之能量，阴阳二气平衡且旺盛。天梁得日月之助，化为<strong>“光明神”</strong>。命主在静定中，极易见到“性光”或“金光”，灵觉超凡。</p>
+
+    <h3>2. 天梁镇库：神明护法</h3>
+    <p>天梁在丑，为入庙旺之地。
+    <strong>丹道义：</strong> 丑为湿土，能生金。天梁在此，如老僧入定，镇守金库。
+    此示命主之性功修持，不需外求，只需<strong>“内守”</strong>。元神自带“纠察”功能，任何外魔（贪狼/七杀）不敢近身。是天生的<strong>“护法体质”</strong>。</p>
+
+    <h2>二、 命功：命宫（亥宫巨门）—— 幽冥开窍</h2>
+    <p>命功者，修身炼气也。此局命宫在亥，亥为六阴之首，为天门（地户），主水。</p>
+
+    <h3>1. 巨门居亥：通灵之口</h3>
+    <p>巨门为暗曜，主口，主管道。亥为大海水，亦为阴界之门。
+    <strong>丹道义：</strong> 命主之肉身（炉鼎），乃是一个连接幽冥与现实的<strong>“通道”</strong>。
+    巨门在此，不再是是非之口，而是<strong>“玄牝之门”</strong>。修持命功时，须练<strong>“闭口藏舌”</strong>（闭地户），将巨门转化为呼吸吐纳的“风箱”。</p>
+
+    <h3>2. 巳亥相冲：水火炼度</h3>
+    <p>命宫（亥/巨门）与对宫（巳/太阳）相冲。
+    <strong>丹道义：</strong>
+    <ul>
+        <li><strong>亥宫：</strong> 极阴之水（巨门）。</li>
+        <li><strong>巳宫：</strong> 极阳之火（太阳）。</li>
+    </ul>
+    此乃<strong>“阴阳激荡”</strong>之局。太阳之光，直射巨门之暗。
+    在实修中，命主须引巳宫之<strong>“日精”</strong>（太阳），下照亥宫之<strong>“海底”</strong>（巨门）。以真阳去烹炼真阴。
+    此过程如阳光穿透深海，主命主能通过肉身修持，开启宿世记忆，或获得穿梭阴阳的能力（出神）。</p>
+
+    <h3>3. 亥卯未木局：灵机深藏</h3>
+    <p>命宫（亥）、官禄（卯）、财帛（未）合成<strong>“亥卯未”木局</strong>。
+    <strong>丹道义：</strong> 水生木，木主生发，主灵性。
+    命主之气脉，呈现出一种<strong>“生生不息”</strong>的特质。木局利于<strong>“通经络”</strong>。命主修习导引术或符咒（木性）时，感应速度极快。</p>
+
+    <h2>三、 丹道实修指引</h2>
+
+    <h3>1. 性功：日月合璧法</h3>
+    <p><strong>功法：</strong> <strong>【存思法】</strong>。
+    意守中丹田（丑宫天梁位）。
+    观想左肩有红日（巳宫太阳），右肩有皓月（酉宫太阴）。
+    吸气时，日月光华同时注入中丹田，照亮天梁元神。
+    此法可快速提升灵能，开启天眼。</p>
+
+    <h3>2. 命功：玄门吐纳法</h3>
+    <p><strong>功法：</strong> <strong>【宝瓶气】</strong>。
+    针对亥宫巨门。
+    巨门为口，亥为水。吸气满腹，闭气（关巨门），观想太阳之火在腹中燃烧海水。
+    以此炼化体内阴渣，成就纯阳之体。</p>
+
+    <h3>3. 建议：借口修真</h3>
+    <p>命主巨门坐命，易犯口业。
+    须将“口”转化为“法口”。多诵经、持咒（巨门之正用），少言是非。
+    <strong>以咒音震动气脉，以光明（福德）照破幽暗（命宫）。</strong></p>
+</article>
+
+<footer>
+    <p>照辅先生 谨按：<br>
+    天梁坐库日月照，巨门居亥守天关。<br>
+    一口吞尽阴阳气，化作金丹跃太玄。</p>
+</footer>
+
+</body>
+</html>
