@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>紫微丹道·十大天命修行格局（卷一） - 照辅先生</title>
+<style>
+    /* --- 核心样式库：道家极简风 --- */
+    :root {
+        --bg-color: #f9f7f2;
+        --text-main: #2c2c2c;
+        --text-sub: #5d4037;
+        --border-color: #4e342e;
+        --ming-bg: #e8dede;
+        --fude-bg: #fff8e1;
+        --accent-red: #8e352e;
+        --accent-gold: #b8860b;
+        --font-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        font-family: var(--font-serif);
+        line-height: 1.6;
+        padding: 20px;
+    }
+
+    header {
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+        text-align: center;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        font-size: clamp(1.2rem, 4vw, 2.2rem);
+        color: var(--text-main);
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .meta { font-size: 0.9rem; color: var(--text-sub); font-weight: bold; }
+
+    .abstract {
+        max-width: 700px;
+        margin: 0 auto 40px auto;
+        padding: 20px;
+        background: #fff;
+        border-left: 5px solid var(--accent-red);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        font-size: 0.95rem;
+        text-align: justify;
+    }
+
+    /* --- 星盘图鉴 --- */
+    .chart-container {
+        max-width: 500px;
+        margin: 0 auto 50px auto;
+        border: 2px solid var(--border-color);
+        background-color: var(--border-color);
+        padding: 2px;
+    }
+
+    .zw-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        aspect-ratio: 1/1;
+        gap: 1px;
+        background-color: var(--border-color);
+    }
+
+    .cell {
+        background-color: #fffbf0;
+        position: relative;
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .is-ming { background-color: var(--ming-bg); box-shadow: inset 0 0 0 1px var(--accent-red); }
+    .is-ming::before {
+        content: "命宫"; position: absolute; top: 0; left: 0;
+        background: var(--accent-red); color: #fff; font-size: 0.6rem; padding: 0 2px;
+    }
+
+    .is-fude { background-color: var(--fude-bg); box-shadow: inset 0 0 0 1px var(--accent-gold); }
+    .is-fude::before {
+        content: "福德"; position: absolute; top: 0; left: 0;
+        background: var(--accent-gold); color: #333; font-size: 0.6rem; padding: 0 2px;
+    }
+
+    .is-jia { background-color: #f0f4c3; }
+
+    .dizhi { position: absolute; bottom: 0; right: 2px; font-size: 0.7rem; color: #999; font-weight: bold; }
+
+    .stars { font-weight: bold; width: 100%; line-height: 1.1; font-size: 0.8rem; }
+    .main-star { color: #000; }
+    .sub-star { color: #555; font-size: 0.8em; font-weight: normal; display: block; transform: scale(0.9); }
+    .borrow-star { color: #666; font-weight: normal; font-size: 0.8em; }
+
+    .center-block {
+        grid-column: 2 / 4; grid-row: 2 / 4;
+        background-color: #fff; padding: 5px;
+        display: flex; flex-direction: column;
+        justify-content: center; align-items: center; text-align: center;
+    }
+    
+    .center-text {
+        font-size: clamp(10px, 2.8vw, 14px);
+        color: var(--text-sub); line-height: 1.5; width: 100%;
+    }
+    
+    .center-text strong { color: var(--accent-red); display: block; margin-bottom: 4px; font-size: 1.1em; }
+    .note { color: #888; font-size: 0.9em; margin-top: 4px; display: block;}
+
+    article { max-width: 800px; margin: 0 auto; }
+    h2 { font-size: 1.3rem; color: var(--text-sub); border-bottom: 1px solid #ddd; padding-bottom: 8px; margin: 35px 0 15px 0; }
+    h3 { font-size: 1.1rem; color: var(--accent-red); margin: 20px 0 10px 0; }
+    p { margin-bottom: 12px; text-align: justify; font-size: 0.95rem; }
+    ul { padding-left: 18px; margin-bottom: 15px; }
+    li { margin-bottom: 5px; font-size: 0.95rem; }
+
+    footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ccc; font-size: 0.85rem; color: #666; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>紫微丹道·十大天命修行格局</h1>
+    <div class="meta">卷一：天机在午格 · 慧福双修</div>
+    <div class="meta">照辅先生 撰 · 编号 006/144</div>
+</header>
+
+<div class="abstract">
+    <strong>格局总论：</strong> 
+    此局乃“紫微在未”星系。命主天机独坐午宫，福德宫于申位为空宫，借对宫天同天梁。
+    其神韵在于<strong>“紫府夹命，金水涵灵”</strong>：性宫得巳宫天府、未宫紫微夹持，如金刚护法，申金生同梁水，灵根深植。
+    此乃<strong>“护法金刚”</strong>根器，性功主灵润，命功主定慧，宜修性命双修之仙道。
+</div>
+
+<!-- 星盘图鉴 -->
+<div class="chart-container">
+    <div class="zw-grid">
+        <!-- 第一行：巳 午 未 申 -->
+        <div class="cell is-jia"><div class="stars main-star">[借]<br>廉贞<br>贪狼</div><div class="dizhi">巳</div></div>
+        <div class="cell is-ming"><div class="stars main-star">天机</div><div class="dizhi">午</div></div>
+        <div class="cell is-jia"><div class="stars main-star">紫微<br>破军</div><div class="dizhi">未</div></div>
+        <div class="cell is-fude"><div class="stars borrow-star">[借]<br>天同<br>天梁</div><div class="dizhi">申</div></div>
+
+        <!-- 第二行：辰 (中) 酉 -->
+        <div class="cell"><div class="stars main-star">太阳</div><div class="dizhi">辰</div></div>
+        <div class="center-block">
+            <div class="center-text">
+                <strong>丹道隐义</strong>
+                体(福德)：申宫借同梁，金水涵灵。<br>
+                用(命宫)：紫府夹天机，帝王护法。<br>
+                照(三方)：机月同梁，灵机内蕴。<br>
+                <span class="note">紫微星位：未宫</span>
+            </div>
+        </div>
+        <div class="cell"><div class="stars borrow-star"><br>天府</div><div class="dizhi">酉</div></div>
+
+        <!-- 第三行：卯 (中) 戌 -->
+        <div class="cell"><div class="stars main-star">武曲<br>七杀</div><div class="dizhi">卯</div></div>
+        <div class="cell"><div class="stars borrow-star"><br>太阴</div><div class="dizhi">戌</div></div>
+
+        <!-- 第四行：寅 丑 子 亥 -->
+        <div class="cell"><div class="stars main-star">天同<br>天梁</div><div class="dizhi">寅</div></div>
+        <div class="cell"><div class="stars main-star">天相</div><div class="dizhi">丑</div></div>
+        <div class="cell"><div class="stars main-star">巨门</div><div class="dizhi">子</div></div>
+        <div class="cell"><div class="stars main-star">廉贞<br>贪狼</div><div class="dizhi">亥</div></div>
+    </div>
+</div>
+
+<article>
+    <h2>一、 性功：福德宫（申宫空宫）—— 金水涵灵</h2>
+    <p>性功者，修心炼神也。此局福德无主星，借入对宫（寅）之天同、天梁。五行属金（申）生水（同梁），乃<strong>“源头活水”</strong>之象。</p>
+    
+    <h3>1. 借星同梁：灵根深植</h3>
+    <p>天同为福，天梁为荫。二星汇聚于申宫长生之地。
+    <strong>丹道义：</strong> 命主元神清澈见底，元气（肾水）极足。天梁主荫，天同主乐，示命主先天带有极强的<strong>“法脉”</strong>传承与<strong>“慈悲”</strong>心肠。修道不靠苦行，而靠感悟与滋养。</p>
+
+    <h3>2. 昌曲夹福（假设）：文采载道</h3>
+    <p>若得文星夹持申宫，则元神中带有“儒道互补”之基因。修道之余，亦能以诗词歌赋阐述大道，如吕祖之风。</p>
+
+    <h2>二、 命功：命宫（午宫天机）</h2>
+    <p>命功者，修身炼气也。此局命宫在午，其肉身智慧之奥秘。</p>
+
+    <h3>1. 紫府夹福德：金刚结界</h3>
+    <p>酉宫天府（库）与未宫紫微（帝）左右夹持申宫。
+    <strong>丹道义：</strong> 在此局中，天同福气被安放在一个<strong>“铜墙铁壁”</strong>般的安全区内。命主先天具备极强的“抗干扰”能力。外魔难侵，内魔易伏。这是上天赐予的<strong>“护道金刚”</strong>。</p>
+
+    <h3>2. 天机居午：木火通明</h3>
+    <p>天机木生午火。
+    <strong>丹道义：</strong> 命主眼神极亮，思维极快。这颗天机星可以心无旁骛地推演天地玄机。极利于研习<strong>“丹道理论、周易预测”</strong>。</p>
+
+    <h2>三、 丹道实修指引</h2>
+
+    <h3>1. 性功：同梁观想</h3>
+    <p><strong>功法：</strong> <strong>【祖师相应法】</strong>。
+    针对申宫借入之同梁。静坐时，观想一位慈悲长者（天梁），手持玉净瓶（天同），从头顶灌注甘露。消除业障，获得灵感，稳固道心。</p>
+
+    <h3>2. 性功：紫府立鼎</h3>
+    <p><strong>功法：</strong> <strong>【金刚座】</strong>。
+    针对紫府夹福德。盘坐时，观想身体周围有紫气（紫微）与黄气（天府）缭绕，形成坚固结界。任由天机在体内高速运转，冲击关窍，而外体巍然不动。</p>
+
+    <h3>3. 建议：定慧等持</h3>
+    <p>命主内有紫府之定，外有天机之慧；体有同梁之荫，用有木火之明。
+    <strong>“以定发慧，以慧辅定。”</strong> 善用天赋，直取大道。</p>
+</article>
+
+<footer>
+    <p>照辅先生 谨按：<br>
+    天机午上木生火，紫府夹性金城锁。<br>
+    申宫借得同梁水，慧福双修证大道。</p>
+</footer>
+
+</body>
+</html>
