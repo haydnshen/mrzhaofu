@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>道家文章列表 - Luckway</title>
     <style>
-        /* 保持与主页一致的皇家紫风格 */
+        /* --- 全局基础样式 (皇家紫主题) --- */
         body {
             font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
             background: linear-gradient(135deg, #1a0b2e 0%, #4b1d6e 100%);
@@ -23,9 +23,10 @@
             margin-bottom: 40px;
             text-shadow: 0 2px 10px rgba(0,0,0,0.5);
             text-align: center;
+            letter-spacing: 2px;
         }
 
-        /* 文章列表容器 */
+        /* --- 容器设置 --- */
         .list-container {
             width: 100%;
             max-width: 800px;
@@ -34,7 +35,62 @@
             gap: 20px;
         }
 
-        /* 单篇文章链接卡片 */
+        /* --- 置顶文章专属样式 (新增) --- */
+        .pinned-card {
+            display: block;
+            /* 金色微光背景，区别于普通文章 */
+            background: rgba(255, 215, 0, 0.1); 
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            /* 金色边框 */
+            border: 2px solid rgba(255, 215, 0, 0.6); 
+            border-radius: 12px;
+            padding: 30px 25px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 10px; /* 与下方列表拉开一点距离 */
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+        }
+
+        .pinned-card:hover {
+            background: rgba(255, 215, 0, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.25);
+            border-color: #ffd700;
+        }
+
+        /* 置顶标签 */
+        .pinned-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: linear-gradient(90deg, #ffd700, #ffaa00);
+            color: #1a0b2e;
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-bottom-left-radius: 10px;
+            box-shadow: -2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .pinned-title {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #ffd700; /* 金色标题 */
+            font-family: "Kaiti", "STKaiti", serif;
+        }
+
+        .pinned-desc {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        /* --- 普通文章卡片样式 --- */
         .article-link {
             display: block;
             background: rgba(255, 255, 255, 0.05);
@@ -51,12 +107,12 @@
 
         .article-link:hover {
             background: rgba(255, 255, 255, 0.15);
-            transform: translateX(10px); /* 悬停时向右轻微移动 */
+            transform: translateX(10px);
             border-color: rgba(255, 255, 255, 0.4);
         }
 
         .article-title {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-bottom: 8px;
             font-weight: bold;
         }
@@ -66,19 +122,29 @@
             color: rgba(255, 255, 255, 0.6);
         }
 
-        /* 返回首页按钮 */
+        /* 序号样式 */
+        .num-tag {
+            color: rgba(255, 255, 255, 0.4);
+            font-family: "Times New Roman", serif;
+            margin-right: 8px;
+            font-style: italic;
+        }
+
+        /* --- 返回按钮 --- */
         .back-btn {
             margin-top: 50px;
-            padding: 10px 30px;
+            padding: 12px 40px;
             border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 30px;
             color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             transition: 0.3s;
+            font-size: 1rem;
         }
         .back-btn:hover {
             background: white;
             color: #4b1d6e;
+            box-shadow: 0 0 15px rgba(255,255,255,0.5);
         }
     </style>
 </head>
@@ -88,79 +154,79 @@
 
     <div class="list-container">
 
-        <!-- 第1篇文章 -->
-        <!-- 注意：因为这个文件和 paper001 在同一个文件夹，所以直接写文件名即可 -->
+        <!-- 【置顶】卷一序言 -->
+        <!-- 将序言放在最上方，并使用特殊的 pinned-card 样式 -->
+        <a href="卷一序言.html" class="pinned-card">
+            <div class="pinned-badge">★ 置顶总纲</div>
+            <div class="pinned-title">卷一序言：十大天命修行格局总纲</div>
+            <div class="pinned-desc">照辅先生 敕撰 · 囊括经、真、法、丹、阳、术、雷、阴、武、诚十大修真法门，统领全卷。</div>
+        </a>
+
+        <!-- 普通文章列表 (001-010) -->
+        
+        <!-- 第1篇 -->
         <a href="paper001.html" class="article-link">
-            <div class="article-title">001. 紫微丹道·十大天命修行格局·机月同梁格</div>
-            <div class="article-desc">紫破在丑天机坐命在子</div>
+            <div class="article-title"><span class="num-tag">001</span>紫微丹道·十大天命修行格局·机月同梁格</div>
+            <div class="article-desc">紫破在丑 · 天机坐命在子 · 经师</div>
         </a>
 
-        <!-- 第2篇文章 -->
+        <!-- 第2篇 -->
         <a href="paper002.html" class="article-link">
-            <div class="article-title">002. 紫微丹道·十大天命修行格局·明珠出海格</div>
-            <div class="article-desc">紫相在辰天梁坐命在巳</div>
+            <div class="article-title"><span class="num-tag">002</span>紫微丹道·十大天命修行格局·明珠出海格</div>
+            <div class="article-desc">紫相在辰 · 天梁坐命在巳 · 真人</div>
         </a>
 
-         <!-- 第3篇文章 -->
+         <!-- 第3篇 -->
         <a href="paper003.html" class="article-link">
-            <div class="article-title">003. 紫微丹道·十大天命修行格局·廉府贪狼格</div>
-            <div class="article-desc">紫微在午廉府坐命在戌</div>
+            <div class="article-title"><span class="num-tag">003</span>紫微丹道·十大天命修行格局·廉府贪狼格</div>
+            <div class="article-desc">紫微在午 · 廉府坐命在戌 · 法师</div>
         </a>
         
-         <!-- 第4篇文章 -->
+         <!-- 第4篇 -->
         <a href="paper004.html" class="article-link">
-            <div class="article-title">004. 紫微丹道·十大天命修行格局·日月并明格</div>
-            <div class="article-desc">紫微在午同巨坐命在丑</div>
+            <div class="article-title"><span class="num-tag">004</span>紫微丹道·十大天命修行格局·日月并明格</div>
+            <div class="article-desc">紫微在午 · 同巨坐命在丑 · 丹士</div>
         </a>
         
-         <!-- 第5篇文章 -->
+         <!-- 第5篇 -->
         <a href="paper005.html" class="article-link">
-            <div class="article-title">005. 紫微丹道·十大天命修行格局·日丽中天格</div>
-            <div class="article-desc">紫贪在酉太阳坐命在午</div>
+            <div class="article-title"><span class="num-tag">005</span>紫微丹道·十大天命修行格局·日丽中天格</div>
+            <div class="article-desc">紫贪在酉 · 太阳坐命在午 · 阳仙</div>
         </a>
         
-         <!-- 第6篇文章 -->
+         <!-- 第6篇 -->
         <a href="paper006.html" class="article-link">
-            <div class="article-title">006. 紫微丹道·十大天命修行格局·天机在午格</div>
-            <div class="article-desc">紫破在未天机坐命在午</div>
+            <div class="article-title"><span class="num-tag">006</span>紫微丹道·十大天命修行格局·天机在午格</div>
+            <div class="article-desc">紫破在未 · 天机坐命在午 · 谋圣</div>
         </a>
         
-        <!-- 第7篇文章 -->
+        <!-- 第7篇 -->
         <a href="paper007.html" class="article-link">
-            <div class="article-title">007. 紫微丹道·十大天命修行格局·七杀紫相格</div>
-            <div class="article-desc">紫相在辰七杀坐命在午</div>
+            <div class="article-title"><span class="num-tag">007</span>紫微丹道·十大天命修行格局·七杀紫相格</div>
+            <div class="article-desc">紫相在辰 · 七杀坐命在午 · 天师</div>
         </a>
 
-        <!-- 第8篇文章 -->
+        <!-- 第8篇 -->
         <a href="paper008.html" class="article-link">
-            <div class="article-title">008. 紫微丹道·十大天命修行格局·英星入庙格</div>
-            <div class="article-desc">紫府在寅破军坐命在子</div>
+            <div class="article-title"><span class="num-tag">008</span>紫微丹道·十大天命修行格局·英星入庙格</div>
+            <div class="article-desc">紫府在寅 · 破军坐命在子 · 金刚 (头陀)</div>
         </a>
 
-        <!-- 第9篇文章 -->
+        <!-- 第9篇 -->
         <a href="paper009.html" class="article-link">
-            <div class="article-title">009. 紫微丹道·十大天命修行格局·巨门日月格</div>
-            <div class="article-desc">紫府在申巨门坐命在亥</div>
+            <div class="article-title"><span class="num-tag">009</span>紫微丹道·十大天命修行格局·巨门日月格</div>
+            <div class="article-desc">紫府在申 · 巨门坐命在亥 · 灵媒</div>
         </a>
         
-        <!-- 第10篇文章 -->
+        <!-- 第10篇 -->
         <a href="paper010.html" class="article-link">
-            <div class="article-title">010. 紫微丹道·十大天命修行格局·贪狼廉相格</div>
-            <div class="article-desc">紫府在寅贪狼坐命在辰</div>
+            <div class="article-title"><span class="num-tag">010</span>紫微丹道·十大天命修行格局·贪狼廉相格</div>
+            <div class="article-desc">紫府在寅 · 贪狼坐命在辰 · 诚士</div>
         </a>
-
-        <!-- 第11篇文章 -->
-        <a href="卷一序言.html" class="article-link">
-            <div class="article-title">卷一序言：十大天命修行格局总纲 - 照辅先生</div>
-            <div class="article-desc"></div>
-        </a>
-
-        <!-- 以后有第6篇，就在这里复制上面的代码块，把 005改成 006 -->
 
     </div>
 
     <!-- 返回最外层主页 -->
-    <!-- ../ 表示“向上一级”，即回到根目录 -->
     <a href="../../index.html" class="back-btn">返回首页</a>
 
 </body>
