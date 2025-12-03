@@ -15,7 +15,7 @@
         /* 页面主体样式 */
         body {
             font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
-            /* 皇家紫渐变背景：营造神秘与高贵的氛围 */
+            /* 皇家紫渐变背景 */
             background: linear-gradient(135deg, #1a0b2e 0%, #4b1d6e 100%);
             color: #ffffff;
             min-height: 100vh;
@@ -28,17 +28,36 @@
         /* 头部标题区域 */
         header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
+            width: 100%;
             animation: fadeInDown 1s ease-out;
         }
 
+        /* 
+           H1 标题优化核心：
+           1. clamp: 字体大小会在 1.8rem 到 3rem 之间根据屏幕宽度自动缩放。
+           2. line-height: 增加行高，防止换行后太挤。
+        */
         h1 {
-            font-size: 3rem;
+            font-family: "Kaiti", "STKaiti", serif; /* 楷体 */
             font-weight: 300;
-            letter-spacing: 5px;
+            letter-spacing: 2px;
             margin-bottom: 10px;
             text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-            font-family: "Kaiti", "STKaiti", serif; /* 使用楷体增加传统韵味 */
+            /* 智能字体大小：手机上最小1.8rem，电脑上最大3rem，中间自动计算 */
+            font-size: clamp(1.8rem, 5vw, 3rem); 
+            line-height: 1.4; 
+        }
+
+        /* 
+           标题分组类：
+           display: inline-block 让这组文字成为一个“方块”。
+           white-space: nowrap 强制这个方块内部不换行。
+           这样“道法自然，”永远在一起，“易理经纬”永远在一起。
+        */
+        .title-group {
+            display: inline-block;
+            white-space: nowrap;
         }
 
         /* 主要内容网格布局 */
@@ -50,19 +69,19 @@
             max-width: 1200px;
         }
 
-        /* 卡片样式 (毛玻璃效果) */
+        /* 卡片样式 */
         .card {
-            background: rgba(255, 255, 255, 0.05); /* 极低透明度背景 */
-            backdrop-filter: blur(10px); /* 磨砂效果 */
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1); /* 微弱的白边框 */
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 16px;
             padding: 40px 30px;
             text-align: center;
             text-decoration: none;
             color: white;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); /* 阴影 */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
             display: flex;
@@ -71,29 +90,25 @@
             min-height: 200px;
         }
 
-        /* 卡片悬停效果 */
         .card:hover {
-            transform: translateY(-10px); /* 上浮 */
+            transform: translateY(-10px);
             background: rgba(255, 255, 255, 0.1);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             border-color: rgba(255, 255, 255, 0.3);
         }
 
-        /* 卡片标题 */
         .card h2 {
             font-size: 1.8rem;
             margin-bottom: 15px;
             font-weight: 400;
         }
 
-        /* 卡片描述 */
         .card p {
             font-size: 1rem;
             color: rgba(255, 255, 255, 0.7);
             line-height: 1.6;
         }
 
-        /* 待开发板块的样式 */
         .card.disabled {
             cursor: default;
             opacity: 0.7;
@@ -104,7 +119,6 @@
             background: rgba(255, 255, 255, 0.05);
         }
 
-        /* "敬请期待" 标签 */
         .badge {
             display: inline-block;
             margin-top: 15px;
@@ -115,22 +129,18 @@
             color: #aaa;
         }
 
-        /* 底部版权 */
         footer {
             margin-top: 60px;
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.4);
         }
 
-        /* 简单的入场动画 */
         @keyframes fadeInDown {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* 移动端适配 */
         @media (max-width: 600px) {
-            h1 { font-size: 2.2rem; }
             .container { padding: 0 10px; }
         }
     </style>
@@ -138,56 +148,65 @@
 <body>
 
     <header>
-        <h1>道法自然，易理经纬</h1>
+        <!-- 
+            这里使用了 span class="title-group" 
+            强制 "道法自然，" 和 "易理经纬" 分别成为不可分割的整体。
+            如果屏幕太窄，它们会整齐地变成两行。
+        -->
+        <h1>
+            <span class="title-group">道法自然，</span>
+            <span class="title-group">易理经纬</span>
+        </h1>
     </header>
 
     <main class="container">
         
-        <!-- 板块 1：道家文章 (已激活) -->
+        <!-- 板块 1：道家文章 -->
+        <!-- 链接指向了 ziweidandao 文件夹下的目录页 -->
         <a href="papers/ziweidandao/index.html" class="card">
             <h2>道家文章</h2>
             <p>大道至简，衍化无穷<br>阅览道家经典与修行感悟</p>
         </a>
 
-        <!-- 板块 2：七维经纬占卜 (待开发) -->
+        <!-- 板块 2：七维经纬占卜 -->
         <div class="card disabled">
             <h2>七维经纬占卜</h2>
             <p>探究时空维度，洞察吉凶祸福</p>
             <span class="badge">后续开发</span>
         </div>
 
-        <!-- 板块 3：紫微命理分析 (待开发) -->
+        <!-- 板块 3：紫微命理分析 -->
         <div class="card disabled">
             <h2>紫微命理分析</h2>
             <p>帝王之术，星盘流转<br>解析命盘十二宫之奥秘</p>
             <span class="badge">后续开发</span>
         </div>
 
-        <!-- 板块 4：奇门风水调运 (待开发) -->
+        <!-- 板块 4：奇门风水调运 -->
         <div class="card disabled">
             <h2>奇门风水调运</h2>
             <p>夺天地造化，改环境气场<br>运筹帷幄之中</p>
             <span class="badge">后续开发</span>
         </div>
 
-        <!-- 板块 5：经世致用学科 (待开发) -->
+        <!-- 板块 5：经世致用学科 -->
         <div class="card disabled">
             <h2>经世致用学科</h2>
             <p>知行合一，实学实修<br>融合传统智慧与现代应用</p>
             <span class="badge">后续开发</span>
         </div>
 
-        <!-- 板块 6：养生宝地堪舆 (待开发) - 新增 -->
+        <!-- 板块 6：养生宝地堪舆 -->
         <div class="card disabled">
             <h2>养生宝地堪舆</h2>
-            <p>旅行移居，藏风聚气<br>寻找适宜修身养性之福地</p>
+            <p>寻龙点穴，藏风聚气<br>寻找适宜修身养性之福地</p>
             <span class="badge">后续开发</span>
         </div>
 
     </main>
 
     <footer>
-        &copy; 2025 luckway.org | 照辅先生
+        &copy; 2025 luckway.org | haydnshen@gmail.com
     </footer>
 
 </body>
