@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>紫微丹道·十大天命修行格局（卷一） - 照辅先生</title>
+<style>
+    /* --- 核心样式库：道家极简风 --- */
+    :root {
+        --bg-color: #f9f7f2;
+        --text-main: #2c2c2c;
+        --text-sub: #5d4037;
+        --border-color: #4e342e;
+        --ming-bg: #e8dede;
+        --fude-bg: #fff8e1;
+        --accent-red: #8e352e;
+        --accent-gold: #b8860b;
+        --font-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        font-family: var(--font-serif);
+        line-height: 1.6;
+        padding: 20px;
+    }
+
+    /* --- 头部 --- */
+    header {
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+        text-align: center;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        font-size: clamp(1.2rem, 4vw, 2.2rem);
+        color: var(--text-main);
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .meta { font-size: 0.9rem; color: var(--text-sub); font-weight: bold; }
+
+    /* --- 摘要 --- */
+    .abstract {
+        max-width: 700px;
+        margin: 0 auto 40px auto;
+        padding: 20px;
+        background: #fff;
+        border-left: 5px solid var(--accent-red);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        font-size: 0.95rem;
+        text-align: justify;
+    }
+
+    /* --- 星盘图鉴 --- */
+    .chart-container {
+        max-width: 500px;
+        margin: 0 auto 50px auto;
+        border: 2px solid var(--border-color);
+        background-color: var(--border-color);
+        padding: 2px;
+    }
+
+    .zw-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        aspect-ratio: 1/1;
+        gap: 1px;
+        background-color: var(--border-color);
+    }
+
+    .cell {
+        background-color: #fffbf0;
+        position: relative;
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .is-ming { background-color: var(--ming-bg); box-shadow: inset 0 0 0 1px var(--accent-red); }
+    .is-ming::before {
+        content: "命宫"; position: absolute; top: 0; left: 0;
+        background: var(--accent-red); color: #fff; font-size: 0.6rem; padding: 0 2px;
+    }
+
+    .is-fude { background-color: var(--fude-bg); box-shadow: inset 0 0 0 1px var(--accent-gold); }
+    .is-fude::before {
+        content: "福德"; position: absolute; top: 0; left: 0;
+        background: var(--accent-gold); color: #333; font-size: 0.6rem; padding: 0 2px;
+    }
+
+    .is-jia { background-color: #f0f4c3; }
+
+    .dizhi { position: absolute; bottom: 0; right: 2px; font-size: 0.7rem; color: #999; font-weight: bold; }
+
+    .stars { font-weight: bold; width: 100%; line-height: 1.1; font-size: 0.8rem; }
+    .main-star { color: #000; }
+    .sub-star { color: #555; font-size: 0.8em; font-weight: normal; display: block; transform: scale(0.9); }
+
+    .center-block {
+        grid-column: 2 / 4; grid-row: 2 / 4;
+        background-color: #fff; padding: 5px;
+        display: flex; flex-direction: column;
+        justify-content: center; align-items: center; text-align: center;
+    }
+    
+    .center-text {
+        font-size: clamp(10px, 2.8vw, 14px);
+        color: var(--text-sub); line-height: 1.5; width: 100%;
+    }
+    
+    .center-text strong { color: var(--accent-red); display: block; margin-bottom: 4px; font-size: 1.1em; }
+    .note { color: #888; font-size: 0.9em; margin-top: 4px; display: block;}
+
+    /* --- 正文 --- */
+    article { max-width: 800px; margin: 0 auto; }
+    h2 { font-size: 1.3rem; color: var(--text-sub); border-bottom: 1px solid #ddd; padding-bottom: 8px; margin: 35px 0 15px 0; }
+    h3 { font-size: 1.1rem; color: var(--accent-red); margin: 20px 0 10px 0; }
+    p { margin-bottom: 12px; text-align: justify; font-size: 0.95rem; }
+    ul { padding-left: 18px; margin-bottom: 15px; }
+    li { margin-bottom: 5px; font-size: 0.95rem; }
+
+    footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ccc; font-size: 0.85rem; color: #666; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>紫微丹道·十大天命修行格局</h1>
+    <div class="meta">卷一：贪狼廉相格 · 诚士证道</div>
+    <div class="meta">照辅先生 撰 · 编号 010/144</div>
+</header>
+
+<div class="abstract">
+    <strong>格局总论：</strong> 
+    此局乃“紫微在寅”星系。命主贪狼独坐辰宫，福德宫廉贞天相坐守午宫。
+    其殊胜在于“浪子回头，赤子丹心”：命宫贪狼受困天罗地网，欲火内敛为道种；福德宫廉贞天相水火既济，得巨梁夹持，紫府武曲三方会照。
+    此乃<strong>“诚士”</strong>根器，性功主忠诚，命功主禁欲，宜修“抱元守一”之实证大道。
+</div>
+
+<!-- 星盘图鉴 -->
+<div class="chart-container">
+    <div class="zw-grid">
+        <!-- 第一行：巳 午 未 申 -->
+        <div class="cell is-jia"><div class="stars main-star">巨门<br><span class="sub-star">[门户]</span></div><div class="dizhi">巳</div></div>
+        <div class="cell is-fude"><div class="stars main-star">廉贞 天相<br><span class="sub-star">[水火既济]</span></div><div class="dizhi">午</div></div>
+        <div class="cell is-jia"><div class="stars main-star">天梁<br><span class="sub-star">[荫庇]</span></div><div class="dizhi">未</div></div>
+        <div class="cell"><div class="stars main-star">七杀</div><div class="dizhi">申</div></div>
+
+        <!-- 第二行：辰 (中) 酉 -->
+        <div class="cell is-ming"><div class="stars main-star">贪狼<br><span class="sub-star">[天罗]</span></div><div class="dizhi">辰</div></div>
+        <div class="center-block">
+            <div class="center-text">
+                <strong>丹道隐义</strong>
+                体(福德)：廉相居午，清白赤诚。<br>
+                用(命宫)：贪狼居辰，欲火归元。<br>
+                夹(暗拱)：巨梁夹持，门户森严。<br>
+                <span class="note">三方：紫府武曲，帝王加持</span>
+            </div>
+        </div>
+        <div class="cell"><div class="stars main-star">天同</div><div class="dizhi">酉</div></div>
+
+        <!-- 第三行：卯 (中) 戌 -->
+        <div class="cell"><div class="stars main-star">太阴</div><div class="dizhi">卯</div></div>
+        <div class="cell"><div class="stars main-star">武曲</div><div class="dizhi">戌</div></div>
+
+        <!-- 第四行：寅 丑 子 亥 -->
+        <div class="cell"><div class="stars main-star">紫微 天府</div><div class="dizhi">寅</div></div>
+        <div class="cell"><div class="stars main-star">天机</div><div class="dizhi">丑</div></div>
+        <div class="cell"><div class="stars main-star">破军</div><div class="dizhi">子</div></div>
+        <div class="cell"><div class="stars main-star">太阳</div><div class="dizhi">亥</div></div>
+    </div>
+</div>
+
+<article>
+    <h2>一、 性功：福德宫（午宫廉相）—— 烈火丹心</h2>
+    <p>性功者，修心炼神也。此局福德坐守午宫（离火），廉贞（火）与天相（水）同宫，乃“水火既济”之大成卦象。</p>
+    
+    <h3>1. 廉贞清白：赤诚无瑕</h3>
+    <p>廉贞在午，古称“廉贞清白格”。在丹道中，廉贞为“神火”，主精神之凝聚力。天相为“印水”，主规范与信义。
+    <strong>丹道义：</strong> 命主之元神（体）极度<strong>“赤诚”</strong>。不同于天机之多变、贪狼之多欲，廉相守福德者，一旦认定道途，便如烈女守节、忠臣死谏，心无旁骛。此种“至诚”之心，正是感通天地、证得金丹之关键。</p>
+
+    <h3>2. 巨梁夹持：门户森严</h3>
+    <p>福德宫被巳宫<strong>巨门</strong>与未宫<strong>天梁</strong>所夹。
+    <ul>
+        <li><strong>巨门（巳）：</strong> 乃“门户”，主严密。</li>
+        <li><strong>天梁（未）：</strong> 乃“城墙”，主荫庇。</li>
+    </ul>
+    此示命主之精神世界防守严密，外魔难侵。巨门闭户，天梁护顶，元神在午宫安炉立鼎，不受外界红尘干扰，最利闭关潜修。</p>
+
+    <h3>3. 紫府朝垣：帝王加持</h3>
+    <p>福德三方会照寅宫之<strong>紫微、天府</strong>。
+    紫微为帝，天府为库。示命主修道之初心，非为小术，而为证得“帝王般自在”之大道。其元神背后有强大的先天资粮（天府）与高维能量（紫微）护持。</p>
+
+    <h2>二、 命功：命宫（辰宫贪狼）—— 欲海回狂</h2>
+    <p>命功者，修身炼气也。此局命宫在辰，贪狼独坐。辰乃天罗地网，亦为水库。</p>
+
+    <h3>1. 贪狼受困：转识成智</h3>
+    <p>贪狼本为欲望之神，主桃花。然落入辰宫天罗地网，如猛虎入笼，蛟龙困滩。
+    <strong>丹道义：</strong> 此乃<strong>“浪子回头”</strong>之象。贪狼之欲火无法向外宣泄（酒色财气），被迫向内转化。命主先天具备极强的生命动能（贪狼），因受辰土之制，这股能量转化为对生命的深度探索。故此格多出“苦行僧”或“戒律严明”之高道。</p>
+
+    <h3>2. 武曲冲照：金木交战</h3>
+    <p>命宫（辰/贪狼木）与迁移宫（戌/武曲金）对冲。
+    <strong>丹道义：</strong> 武曲为刚金，贪狼为柔木。金克木，主<strong>“修剪”</strong>。
+    命功修持中，须借武曲之“决断力”，不断修剪贪狼之“妄念”与“淫欲”。每一次克制，皆是将贪狼之“精”转化为武曲之“气”。</p>
+
+    <h2>三、 丹道实修指引</h2>
+
+    <h3>1. 性功：守一抱元</h3>
+    <p><strong>功法：</strong> <strong>【九炎炼心法】</strong>。
+    意守午宫（膻中/心窍）。观想廉贞之火燃烧，将一切杂念焚烧殆尽，只留天相之一点真水。
+    <strong>心法：</strong> <strong>“诚”</strong>。不求神通，不求速成，唯以一颗赤子之心，死守丹田。</p>
+
+    <h3>2. 命功：锁心猿法</h3>
+    <p><strong>功法：</strong> <strong>【蛰龙眠】</strong>。
+    针对贪狼受困之局。利用辰宫之“藏”性，修习睡功。
+    在睡眠中，意念将贪狼之欲火封固于天罗地网（丹田）之中，不令外泄。久之，欲火化为真火，冲开百脉。</p>
+
+    <h3>3. 建议：以戒为师</h3>
+    <p>命主成道之机，全在<strong>“戒律”</strong>二字。
+    贪狼最怕放纵，最喜管束。借廉贞之清白、天相之印信，严守戒律，方能将贪狼转化为“长生之药”。</p>
+</article>
+
+<footer>
+    <p>照辅先生 谨按：<br>
+    贪狼入网欲难张，廉贞清白守中黄。<br>
+    巨梁夹护紫府照，赤子丹心证道源。</p>
+</footer>
+
+</body>
+</html>
