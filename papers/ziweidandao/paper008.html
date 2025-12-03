@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>紫微丹道·十大天命修行格局（卷一） - 照辅先生</title>
+<style>
+    /* --- 核心样式库：道家极简风 --- */
+    :root {
+        --bg-color: #f9f7f2;
+        --text-main: #2c2c2c;
+        --text-sub: #5d4037;
+        --border-color: #4e342e;
+        --ming-bg: #e8dede;
+        --fude-bg: #fff8e1;
+        --accent-red: #8e352e;
+        --accent-gold: #b8860b;
+        --font-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        font-family: var(--font-serif);
+        line-height: 1.6;
+        padding: 20px;
+    }
+
+    header {
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+        text-align: center;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        font-size: clamp(1.2rem, 4vw, 2.2rem);
+        color: var(--text-main);
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .meta { font-size: 0.9rem; color: var(--text-sub); font-weight: bold; }
+
+    .abstract {
+        max-width: 700px;
+        margin: 0 auto 40px auto;
+        padding: 20px;
+        background: #fff;
+        border-left: 5px solid var(--accent-red);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        font-size: 0.95rem;
+        text-align: justify;
+    }
+
+    .chart-container {
+        max-width: 500px;
+        margin: 0 auto 50px auto;
+        border: 2px solid var(--border-color);
+        background-color: var(--border-color);
+        padding: 2px;
+    }
+
+    .zw-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        aspect-ratio: 1/1;
+        gap: 1px;
+        background-color: var(--border-color);
+    }
+
+    .cell {
+        background-color: #fffbf0;
+        position: relative;
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .is-ming { background-color: var(--ming-bg); box-shadow: inset 0 0 0 1px var(--accent-red); }
+    .is-ming::before {
+        content: "命宫"; position: absolute; top: 0; left: 0;
+        background: var(--accent-red); color: #fff; font-size: 0.6rem; padding: 0 2px;
+    }
+
+    .is-fude { background-color: var(--fude-bg); box-shadow: inset 0 0 0 1px var(--accent-gold); }
+    .is-fude::before {
+        content: "福德"; position: absolute; top: 0; left: 0;
+        background: var(--accent-gold); color: #333; font-size: 0.6rem; padding: 0 2px;
+    }
+
+    .dizhi { position: absolute; bottom: 0; right: 2px; font-size: 0.7rem; color: #999; font-weight: bold; }
+    .stars { font-weight: bold; width: 100%; line-height: 1.1; font-size: 0.8rem; }
+    .main-star { color: #000; }
+
+    .center-block {
+        grid-column: 2 / 4; grid-row: 2 / 4;
+        background-color: #fff; padding: 5px;
+        display: flex; flex-direction: column;
+        justify-content: center; align-items: center; text-align: center;
+    }
+    .center-text {
+        font-size: clamp(10px, 2.8vw, 14px);
+        color: var(--text-sub); line-height: 1.5; width: 100%;
+    }
+    .center-text strong { color: var(--accent-red); display: block; margin-bottom: 4px; font-size: 1.1em; }
+    .note { color: #888; font-size: 0.9em; margin-top: 4px; display: block;}
+
+    article { max-width: 800px; margin: 0 auto; }
+    h2 { font-size: 1.3rem; color: var(--text-sub); border-bottom: 1px solid #ddd; padding-bottom: 8px; margin: 35px 0 15px 0; }
+    h3 { font-size: 1.1rem; color: var(--accent-red); margin: 20px 0 10px 0; }
+    p { margin-bottom: 12px; text-align: justify; font-size: 0.95rem; }
+
+    footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ccc; font-size: 0.85rem; color: #666; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>紫微丹道·十大天命修行格局</h1>
+    <div class="meta">卷一：英星入庙格 · 金刚护法</div>
+    <div class="meta">照辅先生 撰 · 编号 008/144</div>
+</header>
+
+<div class="abstract">
+    <strong>格局总论：</strong> 
+    此局乃“紫微在寅”星系。命主破军独坐子水，福德宫于寅位坐紫微天府。
+    其殊胜在于<strong>“身苦心贵”</strong>：福德宫（体）紫府同宫，元神如帝王般稳固尊贵；命宫（用）破军居子水，肉身如战将般冲锋陷阵。
+    此乃<strong>“金刚”</strong>根器，性功主内圣，命功主炼形，宜修肉身实证大道。
+</div>
+
+<!-- 星盘图鉴 -->
+<div class="chart-container">
+    <div class="zw-grid">
+        <!-- 第一行：巳 午 未 申 -->
+        <div class="cell"><div class="stars main-star">巨门</div><div class="dizhi">巳</div></div>
+        <div class="cell"><div class="stars main-star">廉贞 天相</div><div class="dizhi">午</div></div>
+        <div class="cell"><div class="stars main-star">天梁</div><div class="dizhi">未</div></div>
+        <div class="cell"><div class="stars main-star">七杀</div><div class="dizhi">申</div></div>
+
+        <!-- 第二行：辰 (中) 酉 -->
+        <div class="cell"><div class="stars main-star">贪狼</div><div class="dizhi">辰</div></div>
+        <div class="center-block">
+            <div class="center-text">
+                <strong>丹道隐义</strong>
+                体(福德)：紫府居寅，元神极贵。<br>
+                用(命宫)：破军居子，英星入庙。<br>
+                局(气机)：申子辰水局，百川归海。<br>
+                <span class="note">格局：金刚护法，肉身证道</span>
+            </div>
+        </div>
+        <div class="cell"><div class="stars main-star">天同</div><div class="dizhi">酉</div></div>
+
+        <!-- 第三行：卯 (中) 戌 -->
+        <div class="cell"><div class="stars main-star">太阴</div><div class="dizhi">卯</div></div>
+        <div class="cell"><div class="stars main-star">武曲</div><div class="dizhi">戌</div></div>
+
+        <!-- 第四行：寅 丑 子 亥 -->
+        <div class="cell is-fude"><div class="stars main-star">紫微 天府</div><div class="dizhi">寅</div></div>
+        <div class="cell"><div class="stars main-star">天机</div><div class="dizhi">丑</div></div>
+        <div class="cell is-ming"><div class="stars main-star">破军</div><div class="dizhi">子</div></div>
+        <div class="cell"><div class="stars main-star">太阳</div><div class="dizhi">亥</div></div>
+    </div>
+</div>
+
+<article>
+    <h2>一、 性功：福德宫（寅宫紫府）—— 内圣外王</h2>
+    <p>性功者，修心炼神也。此局福德宫坐<strong>紫微、天府</strong>于寅（木）宫。寅为长生之地，南北斗主星同宫，乃“极贵”之格。</p>
+    
+    <h3>1. 紫府同宫：元神稳固</h3>
+    <p>紫微为帝，天府为库。
+    <strong>丹道义：</strong> 命主之元神（体）先天具备<strong>“统治级”</strong>的稳定性。无论肉身（命宫）遭受何种苦难与动荡，内心深处始终有一个“如如不动”的君王。这种强大的精神内核，是命主能够承受“苦修”而不崩溃的根本保障。</p>
+
+    <h3>2. 寅宫长生：生生不息</h3>
+    <p>寅宫属木，为火之长生。紫府在此，示命主之灵性具有极强的<strong>“再生能力”</strong>。
+    <strong>丹道义：</strong> 命主修性功，不需刻意修“空”，而应修<strong>“尊”</strong>。观想元神端坐金銮，俯视肉身之磨砺，视苦难为成就金刚法身的资粮。</p>
+
+    <h2>二、 命功：命宫三方（申子辰）—— 水局冲关</h2>
+    <p>命功者，修身炼气也。此局命宫在子，三方必会申宫七杀、辰宫贪狼，构成<strong>“申子辰”水局</strong>。</p>
+
+    <h3>1. 破军居子：水浪滔天</h3>
+    <p>命宫破军独坐子水，为“英星入庙”。
+    <strong>丹道义：</strong> 破军属水，居子水帝旺之地。命主先天<strong>“肾水”</strong>（元精）极度充盈，如江河奔涌。
+    命功修持之核心，在于<strong>“疏导”</strong>。利用破军的冲力，修习<strong>“冲关”</strong>之法。此格最利于打通任督二脉，一气呵成。</p>
+
+    <h3>2. 申子辰合水：百川归海</h3>
+    <p>命宫（子）、财帛（申）、官禄（辰）合成水局。
+    <strong>丹道义：</strong> 申宫七杀（金）生水，辰宫贪狼（水库）纳水。
+    此局命功之秘，在于<strong>“周天搬运”</strong>。引申宫之金气（肺）生子宫之水（肾），再归入辰宫之库（丹田）。若能归库，破军之水便由“泛滥”转为“朝宗”，成“气吞山河”之势。</p>
+
+    <h2>三、 丹道实修指引</h2>
+
+    <h3>1. 性功：内观皇庭</h3>
+    <p><strong>功法：</strong> <strong>【紫府坐忘】</strong>。
+    意守上丹田（灵台）。观想元神端坐于金碧辉煌的宫殿（寅宫紫府）之中，巍然不动。
+    无论肉身（破军）正在经历何种剧痛（如盘腿、辟谷），元神只做“旁观者”，不喜不悲，以此磨练定力。</p>
+
+    <h3>2. 命功：水局冲浪</h3>
+    <p><strong>功法：</strong> <strong>【三昧 / 动桩】</strong>。
+    针对破军之好动与水局之浩大。
+    不宜修静坐，宜修<strong>“行香”</strong>或<strong>“磕长头”</strong>。
+    在剧烈的身体律动中，引导肾水（子）沿脊柱上冲，如海浪拍岸，一波接一波，直至冲开顶门（泥丸）。</p>
+
+    <h3>3. 建议：借假修真</h3>
+    <p>命主元神极贵（紫府），肉身极苦（破军）。
+    修行切忌贪图安逸，当以<strong>“实证”</strong>为主。
+    以肉身之“坏”，证法身之“成”，做大道之<strong>金刚护法</strong>。</p>
+</article>
+
+<footer>
+    <p>照辅先生 谨按：<br>
+    破军子位浪滔天，紫府寅宫作圣贤。<br>
+    肉身甘受千般苦，换得金刚不坏身。</p>
+</footer>
+
+</body>
+</html>
